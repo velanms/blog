@@ -1,7 +1,7 @@
 ---
 title: "Test"
 date: 2022-01-22T09:51:19+05:30
-draft: true
+draft: false
 ---
 ---
 __Advertisement :)__

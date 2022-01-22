@@ -1,7 +1,7 @@
 ---
 title: "Test2"
 date: 2022-01-22T09:53:37+05:30
-draft: true
+draft: false
 ---
 # Markdown: Syntax
 

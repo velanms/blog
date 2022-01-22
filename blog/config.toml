@@ -1,3 +1,4 @@
+
 baseURL = 'https://0xv31an5a1i5.xyz/'
 languageCode = 'en-us'
 title = 'Velan Salis'
@@ -5,9 +6,15 @@ theme = 'papermod'
 
 [params.profileMode]
 enabled = true
-title = "Velan Salis"
+title = "Velan Salis 👋"
 subtitle = "Just another developer, trying new things, making stupid mistakes and learning from them! Welcome to my little corner of the internet."
-imageUrl = "<image link>"
-imageTitle = "dayum!"
+imageUrl = "https://codeberg.org/avatars/fd0901cdcb80439bc8849901838965f0?size=1160"
+imageTitle = "Velan"
 imageWidth = 120
 imageHeight = 120
+defaultTheme = "dark"
+disableThemeToggle = true
+ShowToc = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
