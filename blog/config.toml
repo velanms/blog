@@ -6,8 +6,8 @@ theme = 'papermod'
 
 [params.profileMode]
 enabled = true
-title = "Velan Salis 👋"
-subtitle = "Just another developer, trying new things, making stupid mistakes and learning from them! Welcome to my little corner of the internet."
+title = "Hey There! 👋"
+subtitle = "Velan here! I'm just another developer, trying new things, making stupid mistakes and learning from them! Welcome to my little corner of the internet."
 imageUrl = "https://codeberg.org/avatars/fd0901cdcb80439bc8849901838965f0?size=1160"
 imageTitle = "Velan"
 imageWidth = 120
@@ -16,5 +16,26 @@ defaultTheme = "dark"
 disableThemeToggle = true
 ShowToc = true
 
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
+    weight = 3
+    permlink = "/posts"
+    slug = "posts"
+  [[menu.main]]
+    name = "Archive"
+    url = "/archive"
+    weight = 3
+    permlink = "/archive"
+    slug = "archive"
+  [[menu.main]]
+    name = "Search"
+    url = "/search"
+    weight = 3
+    permlink = "/search"
+    slug = "search"
+
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
+
