@@ -1,0 +1,60 @@
+baseURL: https://0xv31an5a1i5.xyz/
+languageCode: en-us
+title: Velan Salis
+theme: papermod
+
+params:
+  socialIcons:
+    - name: "gitea"
+      url: "https://codeberg.org/0xv31an5a1i5"
+    - name: "github"
+      url: "https://github.com/0xv31an5a1i5"
+    - name: "keybase"
+      url: "https://keyoxide.org/hkp/hi%400xv31an5a1i5.xyz"
+    - name: "email"
+      url: "mailto:hi@0xv31an5a1i5.xyz"
+    - name: "mastodon"
+      url: "https://mastodon.lhin.space/@0xv31an5a1i5"
+    - name: "matrix"
+      url: "https://matrix.to/#/@0xv31an5a1i5:chat.lhin.space"
+    - name: "telegram"
+      url: "https://t.me/velansalis"
+
+  profileMode:
+    enabled: true
+    title: Hey There! 👋
+    subtitle: I'm just another developer, trying new things, making
+      stupid mistakes and learning from them! Welcome to my little corner of the
+      internet.
+    imageUrl: https://codeberg.org/avatars/fd0901cdcb80439bc8849901838965f0?size=1160
+    imageTitle: Velan
+    imageWidth: 120
+    imageHeight: 120
+    defaultTheme: dark
+    disableThemeToggle: true
+    ShowToc: true
+    ShowShareButtons: true
+
+menu:
+  main:
+    - name: Posts
+      url: /posts
+      weight: 1
+      permlink: /posts
+      slug: posts
+    - name: Archive
+      url: /archive
+      weight: 2
+      permlink: /archive
+      slug: archive
+    - name: Search
+      url: /search
+      weight: 3
+      permlink: /search
+      slug: search
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
