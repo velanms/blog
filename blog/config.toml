@@ -20,13 +20,13 @@ ShowToc = true
   [[menu.main]]
     name = "Posts"
     url = "/posts"
-    weight = 3
+    weight = 1
     permlink = "/posts"
     slug = "posts"
   [[menu.main]]
     name = "Archive"
     url = "/archive"
-    weight = 3
+    weight = 2
     permlink = "/archive"
     slug = "archive"
   [[menu.main]]
