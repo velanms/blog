@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Velan Salis</title>
-    <link>https://0xv31an5a1i5.xyz/</link>
-    <description>Recent content on Velan Salis</description>
+    <title>Tutorial on Velan Salis</title>
+    <link>https://0xv31an5a1i5.xyz/categories/tutorial/</link>
+    <description>Recent content in Tutorial on Velan Salis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://0xv31an5a1i5.xyz/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ecosystematic Walls of Incarceration </title>
-      <link>https://0xv31an5a1i5.xyz/posts/ecosystem-incarceration/</link>
-      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://0xv31an5a1i5.xyz/posts/ecosystem-incarceration/</guid>
-      <description>Just a little motivation for you to get out of that ecosystem</description>
-    </item>
-    
+    <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://0xv31an5a1i5.xyz/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple file upload using Koa.js (or Node.js in General)</title>
       <link>https://0xv31an5a1i5.xyz/posts/file-upload-koa-js/</link>
@@ -33,17 +24,6 @@
       <guid>https://0xv31an5a1i5.xyz/posts/docker-as-virtualenv/</guid>
       <description>A post about using docker to improve the workflow related to python development</description>
     </item>
-    
-    <item>
-      <title>Lego Coding</title>
-      <link>https://0xv31an5a1i5.xyz/posts/lego-coding/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://0xv31an5a1i5.xyz/posts/lego-coding/</guid>
-      <description>My Journey of Building Lego Castles with Code</description>
-    </item>
-    
-    
     
   </channel>
 </rss>

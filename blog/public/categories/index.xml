@@ -5,6 +5,34 @@
     <link>https://0xv31an5a1i5.xyz/categories/</link>
     <description>Recent content in Categories on Velan Salis</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://0xv31an5a1i5.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://0xv31an5a1i5.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opinions</title>
+      <link>https://0xv31an5a1i5.xyz/categories/opinions/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://0xv31an5a1i5.xyz/categories/opinions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://0xv31an5a1i5.xyz/categories/tutorial/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://0xv31an5a1i5.xyz/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technology</title>
+      <link>https://0xv31an5a1i5.xyz/categories/technology/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://0xv31an5a1i5.xyz/categories/technology/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

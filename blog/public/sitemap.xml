@@ -2,24 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://0xv31an5a1i5.xyz/posts/</loc>
-    <lastmod>2022-01-22T09:53:37+05:30</lastmod>
+    <loc>https://0xv31an5a1i5.xyz/categories/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://0xv31an5a1i5.xyz/posts/test2/</loc>
-    <lastmod>2022-01-22T09:53:37+05:30</lastmod>
+    <loc>https://0xv31an5a1i5.xyz/posts/ecosystem-incarceration/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/categories/opinions/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/posts/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/privacy/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://0xv31an5a1i5.xyz/</loc>
-    <lastmod>2022-01-22T09:53:37+05:30</lastmod>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://0xv31an5a1i5.xyz/posts/test/</loc>
-    <lastmod>2022-01-22T09:51:19+05:30</lastmod>
+    <loc>https://0xv31an5a1i5.xyz/tags/koajs/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/nodejs/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/posts/file-upload-koa-js/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/categories/tutorial/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/docker/</loc>
+    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/posts/docker-as-virtualenv/</loc>
+    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/python/</loc>
+    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/virtualenv/</loc>
+    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/coding/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/posts/lego-coding/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/tags/story/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://0xv31an5a1i5.xyz/categories/technology/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://0xv31an5a1i5.xyz/archive/</loc>
   </url><url>
-    <loc>https://0xv31an5a1i5.xyz/categories/</loc>
-  </url><url>
     <loc>https://0xv31an5a1i5.xyz/search/</loc>
-  </url><url>
-    <loc>https://0xv31an5a1i5.xyz/tags/</loc>
   </url>
 </urlset>
