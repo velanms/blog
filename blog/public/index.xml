@@ -44,6 +44,24 @@
     </item>
     
     
+    <item>
+      <title>Elsewhere</title>
+      <link>https://0xv31an5a1i5.xyz/elsewhere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://0xv31an5a1i5.xyz/elsewhere/</guid>
+      <description>[WIP] This page contains the links to other social media handles from where I can be contacted</description>
+    </item>
+    
+    
+    <item>
+      <title>Uses</title>
+      <link>https://0xv31an5a1i5.xyz/uses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://0xv31an5a1i5.xyz/uses/</guid>
+      <description>[WIP] This page contains an overview of the tools that I use to manage my day-to-day life</description>
+    </item>
     
   </channel>
 </rss>
