@@ -56,6 +56,16 @@ menu:
       weight: 3
       permlink: /search
       slug: search
+    - name: Elsewhere
+      url: /elsewhere
+      weight: 4
+      permlink: /elsewhere
+      slug: elsewhere
+    - name: Uses
+      url: /uses
+      weight: 5
+      permlink: /uses
+      slug: uses
 
 outputs:
   home:

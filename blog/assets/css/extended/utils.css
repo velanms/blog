@@ -7,19 +7,31 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.061);
 }
 
-@media screen and (max-width:425px) {
-    :root {
-        --gap: 20px;
-        --header-height: 50px;
-    }
+.profile {
+    padding: 0em 7em;
 }
 
-@media screen and (min-width: 426) and (max-width:768px) {
+/* for phones */
+@media screen and (max-width:550px) {
+    :root {
+        --gap: 26px;
+        --header-height: 50px;
+    }
+
+    .nav, .footer {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .profile {
+        padding: 0em;
+    }
+
+}
+
+/* For tablets */
+@media screen and (min-width: 426) and (max-width:769px) {
     :root {
         --gap: 30px;
     }
 
-    .profile {
-        padding: 0em 5em;
-    }
 }
