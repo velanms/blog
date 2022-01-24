@@ -4,6 +4,14 @@ title: Velan Salis
 theme: papermod
 
 params:
+
+  defaultTheme: dark
+  disableThemeToggle: true
+  ShowToc: true
+  DateFormat: "January 2, 2006"
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  
   socialIcons:
     - name: "gitea"
       url: "https://codeberg.org/0xv31an5a1i5"
@@ -30,10 +38,6 @@ params:
     imageTitle: Velan
     imageWidth: 120
     imageHeight: 120
-    defaultTheme: dark
-    disableThemeToggle: true
-    ShowToc: true
-    ShowShareButtons: true
 
 menu:
   main:

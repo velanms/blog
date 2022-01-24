@@ -1,0 +1,25 @@
+.post-entry {
+    border-radius: 0;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.061);
+}
+
+@media screen and (max-width:425px) {
+    :root {
+        --gap: 20px;
+        --header-height: 50px;
+    }
+}
+
+@media screen and (min-width: 426) and (max-width:768px) {
+    :root {
+        --gap: 30px;
+    }
+
+    .profile {
+        padding: 0em 5em;
+    }
+}
