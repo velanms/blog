@@ -11,6 +11,10 @@
     padding: 0em 7em;
 }
 
+.entry-content {
+    font-size: 1em;
+}
+
 /* for phones */
 @media screen and (max-width:550px) {
     :root {
