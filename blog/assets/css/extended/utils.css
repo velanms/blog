@@ -13,6 +13,7 @@
 
 .entry-content {
     font-size: 1em;
+    -webkit-line-clamp: 3;
 }
 
 /* for phones */
