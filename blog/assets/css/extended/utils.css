@@ -16,6 +16,23 @@
     -webkit-line-clamp: 3;
 }
 
+.footer { 
+    display: none;
+}
+
+#extended_footer {
+    text-align: center;
+    line-height: 2em;
+    font-size: 0.8em;
+    padding: 1em 2em;
+    color: rgba(255, 255, 255, 0.657);
+}
+
+#extended_footer > a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
 /* for phones */
 @media screen and (max-width:550px) {
     :root {
