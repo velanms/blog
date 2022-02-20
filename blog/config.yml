@@ -5,6 +5,7 @@ theme: papermod
 
 params:
 
+  ShowFullTextinRSS: true
   defaultTheme: dark
   disableThemeToggle: true
   ShowToc: true
