@@ -11,7 +11,7 @@
 <meta name="author" content="Velan Salis">
 <link rel="canonical" href="https://0xv31an5a1i5.xyz/posts/file-upload-koa-js/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.23028c44a2fdfcfe5058a86fdb4f0c52bb6cd99eb27ecdaf4472fd27479b942e.css" integrity="sha256-IwKMRKL9/P5QWKhv208MUrts2Z6yfs2vRHL9J0eblC4=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js" integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://0xv31an5a1i5.xyz/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://0xv31an5a1i5.xyz/favicon-16x16.png">
@@ -20,7 +20,7 @@
 <link rel="mask-icon" href="https://0xv31an5a1i5.xyz/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.92.1" />
+<meta name="generator" content="Hugo 0.93.2" />
 <noscript>
     <style>
         #theme-toggle,
@@ -164,11 +164,11 @@
   <div class="post-content"><p>I have been using Koa.js for a while now and it turns out to be great. I’m having a lot of fun playing around with it since its simple and configurable. And I was searching for a <em>ground up</em> way to execute file uploads so that I can tweak its functionality however I want to. And it turns out, It’s not as difficult as I thought. Before going forward, I’m assuming you have a basic knowledge of how to setup basic Koa.js server with routers since it’s being covered in so many articles. So I’ll be skipping the server setup with routers. <a href="https://medium.com/@adam_bickford/creating-a-basic-site-with-koa-pt-1-f3e1711f7a9">Click here</a> if you want to go through an article that covers the same. So, Lets get coding. 😉</p>
 <h3 id="server-page--appjs">Server Page : app.js<a hidden class="anchor" aria-hidden="true" href="#server-page--appjs">#</a></h3>
 <pre tabindex="0"><code>// app.js
-const Koa = require(&quot;koa&quot;);
-const koaBody = require(&quot;koa-body&quot;);
-const logger = require(&quot;koa-logger&quot;);
+const Koa = require(&#34;koa&#34;);
+const koaBody = require(&#34;koa-body&#34;);
+const logger = require(&#34;koa-logger&#34;);
 
-const router = require(&quot;./router&quot;);
+const router = require(&#34;./router&#34;);
 
 const app = new Koa();
 
@@ -181,7 +181,7 @@ app.use(logger());
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(3000, () =&gt; {
-    console.log(&quot;Listening at 3000&quot;);
+    console.log(&#34;Listening at 3000&#34;);
 });
 </code></pre><p>The above app.js file starts up the server and starts listening in port 3000 for requests. Simple stuff, nothing fancy. But things to be noted are the koa-body module and <code>{ multipart : true }</code> option. This part is really important, since koa-body parses the request body and populates Koa <code>ctx</code> object based on the form data being sent. When a file is being sent from the front-end, koa-body parses the request and the uploaded file attributes will be available under <code>ctx.request.files</code> which we can then access across Koa server to implement file upload functionality</p>
 <h3 id="router-and-upload-logic--routerjs">Router and Upload Logic : Router.js<a hidden class="anchor" aria-hidden="true" href="#router-and-upload-logic--routerjs">#</a></h3>
@@ -189,43 +189,43 @@ app.listen(3000, () =&gt; {
 <p>In this part, you will need a package called promisepipe which I’ll explain in a second. For now, install the package by running the following command. And create a folder named uploads in the root of the project which will hold uploaded images.</p>
 <pre tabindex="0"><code>npm install promisepipe
 </code></pre><pre tabindex="0"><code>// router.js
-const Koa = require(&quot;koa&quot;);
-const Router = require(&quot;koa-router&quot;);
-const promisePipe = require(&quot;promisepipe&quot;);
-const fs = require(&quot;fs&quot;);
-const path = require(&quot;path&quot;);
+const Koa = require(&#34;koa&#34;);
+const Router = require(&#34;koa-router&#34;);
+const promisePipe = require(&#34;promisepipe&#34;);
+const fs = require(&#34;fs&#34;);
+const path = require(&#34;path&#34;);
 
 const router = new Router();
 
-router.get(&quot;/&quot;, (context, next) =&gt; {
-    context.body = &quot;Hey&quot;;
+router.get(&#34;/&#34;, (context, next) =&gt; {
+    context.body = &#34;Hey&#34;;
 });
 
-router.post(&quot;/upload&quot;, async (context, next) {
+router.post(&#34;/upload&#34;, async (context, next) {
     try {
         const uploadfile = context.request.files.file;
         const savefile = `${Date.now()}#${uploadfile.name}`;
         const readStream = fs.createReadStream(uploadfile.path);
-        const writeStream = fs.createWriteStream(path.join(&quot;uploads&quot;, savefile));
+        const writeStream = fs.createWriteStream(path.join(&#34;uploads&#34;, savefile));
         await promisePipe(
-            readStream.on(&quot;error&quot;, () =&gt; {
+            readStream.on(&#34;error&#34;, () =&gt; {
                 throw new Error({
-                    errors: &quot;File Read Error&quot;
+                    errors: &#34;File Read Error&#34;
                 });
             }),
-            writeStream.on(&quot;error&quot;, () =&gt; {
+            writeStream.on(&#34;error&#34;, () =&gt; {
                 throw new Error({
-                    errors: &quot;Write Error&quot;
+                    errors: &#34;Write Error&#34;
                 });
             })
         );
         context.body = {
-            message: &quot;File Uploaded&quot;
+            message: &#34;File Uploaded&#34;
         };
     } catch (err) {
         console.log(err);
         context.body = {
-            message: &quot;There was an error&quot;,
+            message: &#34;There was an error&#34;,
             errors: err
         };
     }
