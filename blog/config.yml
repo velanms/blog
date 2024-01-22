@@ -1,10 +1,9 @@
-baseURL: https://0xv31an5a1i5.xyz/
+baseURL: https://velanms.com/
 languageCode: en-us
 title: Velan Salis.
 theme: papermod
 
 params:
-
   ShowFullTextinRSS: true
   defaultTheme: dark
   disableThemeToggle: true
