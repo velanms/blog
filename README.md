@@ -1,3 +1,3 @@
-# 0xv31an5a1i5.xyz
+# velanms.com
 
 The files and directories related to my personal hugo blog.
