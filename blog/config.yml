@@ -15,18 +15,18 @@ params:
   socialIcons:
     - name: "gitea"
       url: "https://codeberg.org/velanms"
-    - name: "github"
-      url: "https://github.com/0xv31an5a1i5"
-    - name: "keybase"
-      url: "https://keyoxide.org/hkp/hi%400xv31an5a1i5.xyz"
+    # - name: "github"
+    #   url: "https://github.com/0xv31an5a1i5"
+    # - name: "keybase"
+    #   url: "https://keyoxide.org/hkp/hi%400xv31an5a1i5.xyz"
     - name: "email"
       url: "mailto:mail@velanms.com"
     - name: "mastodon"
-      url: "https://mastodon.lhin.space/@0xv31an5a1i5"
-    - name: "matrix"
-      url: "https://matrix.to/#/@0xv31an5a1i5:chat.lhin.space"
-    - name: "telegram"
-      url: "https://t.me/velansalis"
+      url: "https://fosstodon.org/@velanms"
+    # - name: "matrix"
+    #   url: "https://matrix.to/#/@0xv31an5a1i5:chat.lhin.space"
+    # - name: "telegram"
+    #   url: "https://t.me/velansalis"
 
   profileMode:
     enabled: true
