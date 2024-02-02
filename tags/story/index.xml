@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>story on Velan Salis.</title>
-    <link>https://velanms.github.io/tags/story/</link>
+    <link>https://velanms.github.io/blog/tags/story/</link>
     <description>Recent content in story on Velan Salis.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://velanms.github.io/tags/story/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://velanms.github.io/blog/tags/story/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lego Coding</title>
-      <link>https://velanms.github.io/posts/lego-coding/</link>
+      <link>https://velanms.github.io/blog/posts/lego-coding/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.github.io/posts/lego-coding/</guid>
+      <guid>https://velanms.github.io/blog/posts/lego-coding/</guid>
       <description>My Journey of Building Lego Castles with Code</description>
       <content:encoded><![CDATA[<p>Sounds Ridiculous! isn’t it ? Me comparing the Megabytes or Terabytes of senseless one’s and zero’s of code to something that is built with Lego bricks. Lego is supposed to be a fun process, right? But coding seems like spending too much time in front of the computer finding which semi-colon did you miss and where! And bang your head to the wall until you get it right. They’re nowhere close to a match. How is that even possible?
 Yeah! you might say that rather sarcastically, or had that notion in your mind all along. But trust me, this is a perfect analogy that I can put forth when it comes to the creative process of coding in its entirety. I call it Lego Coding. And it is something that you are already familiar with, but never acknowledged it for how amazing it really is.</p>
