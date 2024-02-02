@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Backup, Restore, Migration - a New VPS | Velan Salis.</title>
+<meta name="keywords" content="">
+<meta name="description" content="Outlining my experiences moving from in-house selfhosted setup to a new remote VPS">
+<meta name="author" content="Velan Salis">
+<link rel="canonical" href="https://velanms.com/posts/backup-restore-migration-a-new-vps/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c0d4ec6336a1165c59b5a3249a625342de2c2f42e4da769c0b935a3c070b050.css" integrity="sha256-DA1OxjNqEWXFm1oySaYlNC3iwvQuTadpwLk1o8BwsFA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://velanms.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://velanms.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://velanms.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://velanms.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://velanms.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Backup, Restore, Migration - a New VPS" />
+<meta property="og:description" content="Outlining my experiences moving from in-house selfhosted setup to a new remote VPS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://velanms.com/posts/backup-restore-migration-a-new-vps/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-17T09:40:53+05:30" />
+<meta property="article:modified_time" content="2022-04-17T09:40:53+05:30" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Backup, Restore, Migration - a New VPS"/>
+<meta name="twitter:description" content="Outlining my experiences moving from in-house selfhosted setup to a new remote VPS"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://velanms.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Backup, Restore, Migration - a New VPS",
+      "item": "https://velanms.com/posts/backup-restore-migration-a-new-vps/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Backup, Restore, Migration - a New VPS",
+  "name": "Backup, Restore, Migration - a New VPS",
+  "description": "Outlining my experiences moving from in-house selfhosted setup to a new remote VPS",
+  "keywords": [
+    
+  ],
+  "articleBody": "If you had been following my blog for some time, you would know that I host most of my services on a self-hosted VPS. For those who are unfamiliar, it’s a computer located in a remote part of the world still enabling me to rent it, access it and host things on it so that me and other people can access it from any part of the world. Sounds revolutionary and exhilarating, can’t deny.\nHowever, the VPS that I had owned earlier had a massive storage of 2 TB, for which I had to make a tradeoff with the processing speed to make it “budge” into my budget (pun intended). Why 2 TB you might ask; well, That was to store numerous photos and videos that my family and I had clicked overtime which were aggregated by a program called Photoprism. But that tradeoff didn’t seem worth the buck, since I was aggravated by the slowness in processing, and it also became obnoxious at times.\nSo I made a decision to migrate my setup to a new VPS.\nBut, Photos and Videos? Ahhh, Wait! I know you would ask that. I moved all my photos and videos (a hefty 45 GB!) to a paid hosted media management service called ente.io. Ente is built on top of open source and peer reviewed architecture with a healthy and growing community. Therefore, they are entirely accountable to its end users.\nAnd to top it all off, they also offer end-to-end encryption to all the hosted media. I can be rest assured to know that no machine is scraping my images to figure out what sort of sandwich I ate this morning! Ente costs ₹299 / month for a 100 GB (the plan I took up amongst others), which I feel is sufficient for my needs. This is a price that I pay for a healthy space for my ideas and memories. And I believe it’s worth it. :)\nA fun backup and restore routine! I’m just going to copy and paste two lines here, which were so elegant that the whole backup and restore across two VPS’s were a breeze. [Credits: GitHub, Docker]\nBackup: docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH\nRestore: docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c \\\"cd CONTAINERPATH \u0026\u0026 tar xvf /backup/backup.tar --strip 1\\\nThis is the command that will save me a lot of hours eventually as I add more and more containers to my setup. This will also help me safely upgrade and downgrade my setup, make tarball backups (automation maybe?) as I go. A fun process, not gonna lie!\nClosing Thoughts Moving to a new VPS reduced my expenses to 75% from the original expenses. All of this while making no compromises on the performance side of things. This makes me wonder if photos and videos storage in a personal VPS is as good as it’s been glorified.\nIn my opinion, a personal VPS should always be inclined towards better performance with limited storage (as a tradeoff). If storage is really required, I believe a new VPS dedicated solely on storage with limited performance (as a tradeoff) can be rented and bridged with the personal VPS via FTP. That would cost less than those two combined. That’s just my two cents.\nOkay bye!\n",
+  "wordCount" : "554",
+  "inLanguage": "en",
+  "datePublished": "2022-04-17T09:40:53+05:30",
+  "dateModified": "2022-04-17T09:40:53+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Velan Salis"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://velanms.com/posts/backup-restore-migration-a-new-vps/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Velan Salis.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://velanms.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://velanms.com/" accesskey="h" title="Velan Salis. (Alt + H)">Velan Salis.</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://velanms.com/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/elsewhere" title="Elsewhere">
+                    <span>Elsewhere</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/uses" title="Uses">
+                    <span>Uses</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Backup, Restore, Migration - a New VPS
+    </h1>
+    <div class="post-description">
+      Outlining my experiences moving from in-house selfhosted setup to a new remote VPS
+    </div>
+    <div class="post-meta"><span title='2022-04-17 09:40:53 +0530 IST'>April 17, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Velan Salis
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#but-photos-and-videos" aria-label="But, Photos and Videos?">But, Photos and Videos?</a></li>
+                <li>
+                    <a href="#a-fun-backup-and-restore-routine" aria-label="A fun backup and restore routine!">A fun backup and restore routine!</a></li>
+                <li>
+                    <a href="#closing-thoughts" aria-label="Closing Thoughts">Closing Thoughts</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>If you had been following my blog for some time, you would know that I host most of my services on a self-hosted VPS. For those who are unfamiliar, it&rsquo;s a computer located in a remote part of the world still enabling me to rent it, access it and host things on it so that me and other people can access it from any part of the world. Sounds revolutionary and exhilarating, can&rsquo;t deny.</p>
+<p>However, the VPS that I had owned earlier had a massive storage of 2 TB, for which I had to make a tradeoff with the processing speed to make it “budge” into my budget (pun intended). Why 2 TB you might ask; well, That was to store numerous photos and videos that my family and I had clicked overtime which were aggregated by a program called Photoprism. But that tradeoff didn&rsquo;t seem worth the buck, since I was aggravated by the slowness in processing, and it also became obnoxious at times.</p>
+<p>So I made a decision to migrate my setup to a new VPS.</p>
+<h2 id="but-photos-and-videos">But, Photos and Videos?<a hidden class="anchor" aria-hidden="true" href="#but-photos-and-videos">#</a></h2>
+<p>Ahhh, Wait! I know you would ask that. I moved all my photos and videos (a hefty 45 GB!) to a paid hosted media management service called ente.io. Ente is built on top of open source and peer reviewed architecture with a healthy and growing community. Therefore, they are entirely accountable to its end users.</p>
+<p>And to top it all off, they also offer end-to-end encryption to all the hosted media. I can be rest assured to know that no machine is scraping my images to figure out what sort of sandwich I ate this morning! Ente costs ₹299 / month for a 100 GB (the plan I took up amongst others), which I feel is sufficient for my needs. This is a price that I pay for a healthy space for my ideas and memories. And I believe it&rsquo;s worth it. :)</p>
+<h2 id="a-fun-backup-and-restore-routine">A fun backup and restore routine!<a hidden class="anchor" aria-hidden="true" href="#a-fun-backup-and-restore-routine">#</a></h2>
+<p>I&rsquo;m just going to copy and paste two lines here, which were so elegant that the whole backup and restore across two VPS&rsquo;s were a breeze. <em>[Credits: GitHub, Docker]</em></p>
+<ul>
+<li>
+<p>Backup: <code>docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH</code></p>
+</li>
+<li>
+<p>Restore: <code>docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c \&quot;cd CONTAINERPATH &amp;&amp; tar xvf /backup/backup.tar --strip 1\</code></p>
+</li>
+</ul>
+<p>This is the command that will save me a lot of hours eventually as I add more and more containers to my setup. This will also help me safely upgrade and downgrade my setup, make tarball backups (automation maybe?) as I go. A fun process, not gonna lie!</p>
+<h2 id="closing-thoughts">Closing Thoughts<a hidden class="anchor" aria-hidden="true" href="#closing-thoughts">#</a></h2>
+<p>Moving to a new VPS reduced my expenses to 75% from the original expenses. All of this while making no compromises on the performance side of things. This makes me wonder if photos and videos storage in a personal VPS is as good as it&rsquo;s been glorified.</p>
+<p>In my opinion, a personal VPS should always be inclined towards better performance with limited storage (as a tradeoff). If storage is really required, I believe a new VPS dedicated solely on storage with limited performance (as a tradeoff) can be rented and bridged with the personal VPS via FTP. That would cost less than those two combined. That&rsquo;s just my two cents.</p>
+<p>Okay bye!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://velanms.com/">Velan Salis.</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><div id="extended_footer">
+© 2022 <a href="/">Velan Salis</a> Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a> <br>
+<a href="/archive">Archive</a> . <a href="/search">Search</a> . <a href="/tags">Tags</a> . <a href="/categories">Categories</a> . <a href="/posts/index.xml">Subscribe</a><br>
+This blog is licenced under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY SA 4.0</a> Unless otherwise stated<br>
+</div>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Velan Salis.</title>
+    <link>https://velanms.com/posts/</link>
+    <description>Recent content in Posts on Velan Salis.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jun 2023 06:18:26 +0530</lastBuildDate>
+    <atom:link href="https://velanms.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decluttering my online self</title>
+      <link>https://velanms.com/posts/decluttering-my-online-self/</link>
+      <pubDate>Fri, 09 Jun 2023 06:18:26 +0530</pubDate>
+      <guid>https://velanms.com/posts/decluttering-my-online-self/</guid>
+      <description>Lately I&amp;rsquo;ve been noticing that my online presence has been all over the place. I usually keep my online presence organized by using a password manager and making sure I make a note of the online services that I&amp;rsquo;m a part of. Despite all that, I&amp;rsquo;ve been greeted with a lot of unsolicited emails, which—in all honesty, I&amp;rsquo;m tired of at this point.
+So I&amp;rsquo;ve decided that I would declutter my online presence and organize my online self.</description>
+      <content:encoded><![CDATA[<p>Lately I&rsquo;ve been noticing that my online presence has been all over the place. I usually keep my online presence organized by using a password manager and making sure I make a note of the online services that I&rsquo;m a part of. Despite all that, I&rsquo;ve been greeted with a lot of unsolicited emails, which—in all honesty, I&rsquo;m tired of at this point.</p>
+<p>So I&rsquo;ve decided that I would declutter my online presence and organize my online self. It would require a lot of going back and forth. And my hope is eventually this exercise would make me more productive and help me use my tools better.</p>
+<p>Good day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Moving to Fastmail -- again!</title>
+      <link>https://velanms.com/posts/moving-to-fastmail-again/</link>
+      <pubDate>Mon, 29 May 2023 02:35:40 +0530</pubDate>
+      <guid>https://velanms.com/posts/moving-to-fastmail-again/</guid>
+      <description>For some reason that I don&amp;rsquo;t remember, I had ditched Fastmail for a self-hosted email setup. Which, then I realized, was a bad idea since self-hosting email is too anxiety inducing; at least if you don&amp;rsquo;t know what you&amp;rsquo;re doing. In my case, it was since I had no clue how the parts moved inside the self-hosted mail service. I just did it for the fun of it and maybe to learn a thing or two in the process.</description>
+      <content:encoded><![CDATA[<p>For some reason that I don&rsquo;t remember, I had ditched Fastmail for a self-hosted email setup. Which, then I realized, was a bad idea since self-hosting email is too anxiety inducing; at least if you don&rsquo;t know what you&rsquo;re doing. In my case, it was since I had no clue how the parts moved inside the self-hosted mail service. I just did it for the fun of it and maybe to learn a thing or two in the process.</p>
+<h2 id="enter-mailboxorghttpsmailboxorg">Enter: <a href="https://mailbox.org/">Mailbox.org</a></h2>
+<p>I have then moved to outsourcing my anxiety to a managed mail clients. I tried mailbox.org for their cheapest plan (3 EUR / month) that covers custom domains. Ability to add custom domains are a requirement since I plan on running the services for <a href="https://en.wikipedia.org/wiki/Fediverse">Fediverse</a> on my server and I should be able to send mails across using SMTP.</p>
+<p>Mailbox is great for what it does. It&rsquo;s cheap, it&rsquo;s fast and it works. However, the UI/UX is not for me. The payment process is clunky where you add credits instead of direct payment from credit card. And the web interface is not so intuitive and user-friendly. And then I thought it&rsquo;s time to move to a new email service.</p>
+<h2 id="fastmailcom--again">Fastmail.com – Again!</h2>
+<p>So I hopped back to <a href="https://fastmail.com">fastmail.com</a> and right off the bat, this sweet nostalgia of UI/UX hit me in the face. I took their trial and then started adding custom domains to the mail client. In 5 mins, I was done. The same task took me almost an hour with mailbox with the SPF and DKIM keys. Boy, I had missed Fastmail. And I don&rsquo;t think I&rsquo;ll go back to any other email services anytime soon.</p>
+<p>Good day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>I&#39;m back—after a long break!</title>
+      <link>https://velanms.com/posts/im-back-after-a-long-break/</link>
+      <pubDate>Mon, 22 May 2023 11:28:45 +0530</pubDate>
+      <guid>https://velanms.com/posts/im-back-after-a-long-break/</guid>
+      <description>Yes! I&amp;rsquo;m back blogging after a long break. Why did I leave? Not sure why, but I needed some time off from the shenanigans of the web and needed to spend some time offline with books, people and generally in the REAL WORLD.
+However, I did really miss blogging. Writing on my blog and sharing it with the world is an incentive for me to try out new things and get ahead of some crazy techie things that are happening on the internet.</description>
+      <content:encoded><![CDATA[<p>Yes! I&rsquo;m back blogging after a long break. Why did I leave? Not sure why, but I needed some time off from the shenanigans of the web and needed to spend some time offline with books, people and generally in the <em>REAL WORLD</em>.</p>
+<p>However, I did really miss blogging. Writing on my blog and sharing it with the world is an incentive for me to try out new things and get ahead of some crazy techie things that are happening on the internet. So, I&rsquo;m back and let&rsquo;s roll with the updates.</p>
+<h2 id="namma-kudla">Namma Kudla</h2>
+<p>I have been experimenting a lot with decentralized social media lately and if you&rsquo;ve followed my posts, you&rsquo;d know that I have already hosted Mastodon and Pixelfed on my server. But, there was always one thing missing. The interactions were generalist and there was no common thing that united us. Relatability was missing.</p>
+<p>So, I decided to create a Mastodon server for the people that are from my area and my culture. And that&rsquo;s how <a href="https://namma.kudla.social">Namma Kudla</a> was born. It&rsquo;s pretty small with very little people having very little interactions for now. But I do hope in the future it gets traction and more and more people join this server. Hope this becomes a viable alternative to Twitter.</p>
+<h2 id="and-thats-it">And, that&rsquo;s it?</h2>
+<p>Yes. So far, that&rsquo;s it. I haven&rsquo;t been spending a lot of time online, and I feel better than ever. I have been reading and researching a lot and that leaves me with a lot more things to try on in the future. And I&rsquo;ll not forget to talk about it here. Until then, see you around. :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How I self-hosted Pixelfed on my tiny server with Docker</title>
+      <link>https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</link>
+      <pubDate>Sun, 07 Aug 2022 05:10:48 +0530</pubDate>
+      <guid>https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</guid>
+      <description>Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &amp;ldquo;Grow at all costs&amp;rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.
+The best thing about Pixelfed is that, it&amp;rsquo;s open source, and it&amp;rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse.</description>
+      <content:encoded><![CDATA[<p>Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.</p>
+<p>The best thing about Pixelfed is that, it&rsquo;s <a href="https://github.com/pixelfed/">open source</a>, and it&rsquo;s <a href="https://github.com/pixelfed/pixelfed/blob/dev/docker-compose.yml">self-hostable</a>. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the <a href="https://www.youtube.com/watch?v=S57uhCQBEk0">Fediverse</a>. Isn&rsquo;t that cool? I recently spun up a <a href="https://pixelfed.lhin.space">Pixelfed instance on my server,</a> and this is an explanatory post about the steps required to host an instance for yourself on your server. Let&rsquo;s dive in, shall we?</p>
+<h2 id="before-we-could-dive-in">Before we could dive in&hellip;</h2>
+<blockquote>
+<p><strong>Note:</strong> The instructions mentioned in this post concerns with Pixelfed version <a href="https://github.com/pixelfed/pixelfed/releases/tag/v0.11.3">0.11.3</a> with additional commits upto <a href="https://github.com/pixelfed/pixelfed/commit/352500fdcee0188cc3ab239939182b43cd194ab9">352500f</a> . I can&rsquo;t guarentee the instructions will ever work for the uncoming releases. Feel free to get in touch with me at <a href="https://mastodon.lhin.space/@0xvms">Mastodon</a> or <a href="mailto:hi@0xvms.com">Email</a> if necessary.</p>
+</blockquote>
+<h2 id="environment-setup">Environment Setup</h2>
+<p>Assuming that you have installed <a href="https://docs.docker.com/engine/install/">docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose</a> on your server, the next thing to note is to set up an <a href="https://github.com/pixelfed/pixelfed/blob/dev/.env.docker">.env</a> file for docker-compose of Pixelfed. My .env file for my self-hosted instance is as follows</p>
+<pre tabindex="0"><code>    APP_NAME=&#34;Pixelfed&#34;
+    APP_ENV=production
+    APP_KEY=
+    APP_DEBUG=false
+    APP_URL=https://pixelfed.lhin.space
+    
+    APP_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    ADMIN_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    SESSION_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    TRUST_PROXIES=&#34;*&#34;
+    
+    LOG_CHANNEL=stack
+    
+    DB_CONNECTION=mysql
+    DB_HOST=mariadb
+    DB_PORT=3306
+    DB_DATABASE=somedatabase # Change this
+    DB_USERNAME=someusername # Change this
+    DB_PASSWORD=somepassword # Change this
+    
+    PUID=1000
+    PGID=1000
+    MYSQL_DATABASE=somedatabase 		# Change this
+    MYSQL_USER=someusername 			# Change this
+    MYSQL_PASSWORD=somepassword			# Change this
+    MYSQL_ROOT_PASSWORD=somepassword	# Change this
+    
+    BROADCAST_DRIVER=redis
+    CACHE_DRIVER=redis
+    SESSION_DRIVER=redis
+    QUEUE_DRIVER=redis
+    
+    REDIS_SCHEME=tcp
+    REDIS_HOST=redis
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
+    
+    # For this setup, you could add any email config as your email provider.
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.mail.host
+    MAIL_PORT=587
+    MAIL_USERNAME=mailbox@server.name
+    MAIL_PASSWORD=somepassword
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS=mailbox@server.name
+    MAIL_FROM_NAME=Pixelfed
+    
+    OPEN_REGISTRATION=false
+    ENFORCE_EMAIL_VERIFICATION=true
+    PF_MAX_USERS=1000
+    
+    MAX_PHOTO_SIZE=15000
+    MAX_CAPTION_LENGTH=150
+    MAX_ALBUM_LENGTH=4
+    
+    ACTIVITY_PUB=true
+    AP_REMOTE_FOLLOW=true
+    AP_SHAREDINBOX=true
+    AP_INBOX=true
+    AP_OUTBOX=true
+    ATOM_FEEDS=true
+    NODEINFO=true
+    WEBFINGER=true
+    
+    HORIZON_DARKMODE=true
+    HORIZON_EMBED=true
+    INSTANCE_CONTACT_EMAIL=admin@server.name
+    OAUTH_ENABLED=true
+    ENABLE_CONFIG_CACHE=false
+</code></pre><p>.env.pixelfed</p>
+<ul>
+<li>Create a file <code>.env.pixelfed</code> in your server directory.</li>
+<li>Copy the contents from the above to the <code>.env.pixelfed</code> file.</li>
+</ul>
+<p>Make sure to replace the values mentioned under *change this *with the respective values that the database and mail server complies with. Once this .env file is all set and done, we move on to docker-compose setup.</p>
+<h2 id="docker-setup">Docker Setup</h2>
+<p>The following is my docker-compose.yml file. I&rsquo;m using the <a href="https://hub.docker.com/r/zknt/pixelfed">zknt/pixelfed</a> image from the Dockerhub, since it&rsquo;s the most downloaded and actively maintained image of Pixelfed, yet.</p>
+<pre tabindex="0"><code>    version: &#39;3&#39;
+    
+    networks:
+      internal:
+        internal: true
+      web:
+        driver: bridge
+        external: true
+    
+    volumes:
+      pixelfed_redis:
+        external: true
+      pixelfed_mariadb:
+        external: true
+      pixelfed_storage:
+        external: true
+      pixelfed_bootstrap:
+        external: true
+    
+    services:
+      app:
+        container_name: pixelfed-app
+        image: zknt/pixelfed:2022-08-06
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_storage:/var/www/storage
+          - pixelfed_bootstrap:/var/www/bootstrap
+          - ./.env.pixelfed:/var/www/.env
+        networks:
+          - web
+          - internal
+        depends_on:
+          - mariadb
+          - redis
+        labels:
+          - traefik.enable=true
+          - traefik.http.routers.pixelfed.rule=Host(`pixelfed.lhin.space`)
+          - traefik.http.routers.pixelfed.tls=true
+          - traefik.http.routers.pixelfed.service=pixelfed
+          - traefik.http.routers.pixelfed.tls.certresolver=lets-encrypt
+          - traefik.http.services.pixelfed.loadbalancer.server.port=80
+    
+      worker:
+        container_name: pixelfed-worker
+        image: zknt/pixelfed:2022-08-04
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_storage:/var/www/storage
+          - pixelfed_bootstrap:/var/www/bootstrap
+          - ./.env.pixelfed:/var/www/.env
+        networks:
+          - web
+          - internal
+        depends_on:
+          - mariadb
+          - redis
+        entrypoint: /worker-entrypoint.sh
+        healthcheck:
+          test: php artisan horizon:status | grep running
+          interval: 60s
+          timeout: 5s
+          retries: 1
+    
+      mariadb:
+        image: ghcr.io/linuxserver/mariadb:alpine-version-10.5.9-r0
+        container_name: pixelfed-mariadb
+        restart: always
+        networks:
+          - internal
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_mariadb:/config:rw
+    
+      redis:
+        image: redis:5-alpine
+        container_name: pixelfed-redis
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_redis:/data
+        networks:
+          - internal
+</code></pre><p>docker-compose.yml
+Copy the following contents to a <code>docker-compose.yml</code> file and keep it in the same directory as the <code>.env.pixelfed</code> file. Change the contents as it pleases you. This is all you need to set up a Pixelfed instance on your server.</p>
+<blockquote>
+<p><strong>Note:</strong> Since I&rsquo;m using traefik to manage my docker images, I tend to have a <code>web</code> network that binds with the traefik docker image. You could use other reverse proxies by removing the <code>labels</code> in the <code>app</code> service and by adding <code>ports: - 80:8080</code>. In this you are redirecting the traffic coming to port 8080 to the docker port 80. <a href="https://docs.docker.com/compose/networking/">More info here</a></p>
+</blockquote>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>In order to run Pixelfed, we need to create external docker volumes first. You could also use <a href="https://docs.docker.com/storage/bind-mounts/">bind mounts</a> to local directory. But I tend to use volumes so that I don&rsquo;t have to fiddle around with permission issues. The following commands will create four volumes.</p>
+<pre><code>docker volume create pixelfed_bootstrap
+docker volume create pixelfed_storage
+docker volume create pixelfed_mariadb
+docker volume create pixelfed_redis
+</code></pre>
+<p>create-volume.sh</p>
+<h2 id="voilà">Voilà!</h2>
+<p>Now for the climax, you need to run <code>docker-compose up -d</code> (?)</p>
+<p>Well, not so fast. You need to do so in steps so that the MariaDB and the Redis is set up properly.</p>
+<ul>
+<li>First, you need to run <code>docker-compose up -d mariadb redis</code>. This will set up the MariaDB and Redis instance. You could also do <code>docker-compose logs -f</code> to check the logs and see what&rsquo;s cooking in there.</li>
+<li>Once that&rsquo;s done, you should run <code>docker-compose up -d app</code>. This will  spin up the app instance and run all the database migrations that are required.</li>
+<li>Next, You need to run <code>docker-compose up -d worker</code>. This will spin up the <code>worker</code> instance which will be responsible for Remote fetching account avatars and other ActivityPub stuff.</li>
+</ul>
+<p>Once this is done, you could check the logs using <code>docker-compose logs -f</code> to see if there are any errors in the installation. If not, we move on to the next step.</p>
+<h2 id="server-setup">Server Setup</h2>
+<p>Firstly, you need to create an app key. Run <code>docker-compose exec app php artisan key:generate</code> to generate an app key. This key will be added to your <code>.env.pixelfed</code> file in <code>base64</code> format.</p>
+<p>Now that the instance is set up properly, we need to create an admin user. You could do so by running <code>docker-compose exec app php artisan user:create</code>. Then answer the prompts given on the screen, and you are done.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><strong>Empty user profiles:</strong> For a brief moment, I had an issue of getting an empty user profile when remote account is being fetched. It was fixed by running <code>docker-compose exec app php artisan passport:install</code> on my server as mentioned in <a href="https://github.com/pixelfed/pixelfed/issues/3549">this issue</a>.</li>
+</ul>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I&rsquo;m very optimistic about a future where decentralized social media like, Pixelfed, Mastodon and the entirety of Fediverse is a thing. I hope to see this pick up steam among the netizens, and also hope to see the service itself becomes accessible to anyone and everyone. For that to happen, this is my small contribution to anyone who wants to spin up a server for themselves. Feel free to <a href="mailto:hi@0xvms.com">contact me</a> for any assistance.</p>
+<p>Have a nice day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How I organize my API tests in Golang</title>
+      <link>https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/</link>
+      <pubDate>Mon, 04 Jul 2022 13:02:23 +0530</pubDate>
+      <guid>https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/</guid>
+      <description>Testing is apparently the most important part in writing API&amp;rsquo;s since there could be so many ways the API&amp;rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&amp;rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&amp;rsquo;m glad if it helps you to organize your tests better :)</description>
+      <content:encoded><![CDATA[<p>Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)</p>
+<h2 id="containment-structs">Containment Structs</h2>
+<p>We need some structs that could act as a handy container for the tests that we are running. This organization is good since they provide a single place to access test methods, test data and also the runtime, dynamic data that needs to be persisted across tests. This might seem a bit overwhelming, but stay with me on this :) Here we assume the testing module name is module</p>
+<pre tabindex="0"><code>type module_test_payload struct {
+    scenario string  method func(t *testing.T)
+}
+
+type module_test_config struct {
+    tests []module_test_payload
+}
+
+type module_tests struct {
+    test_api map[string]module_test_config
+}
+</code></pre><h2 id="test-method-identifiers">Test Method Identifiers</h2>
+<p>The below const values act as a key for the test_api map so that the data and methods can be cleanly isolated and maintained inside the test_api map in module_tests. (One Identifier for one function)</p>
+<pre tabindex="0"><code>const (
+    GetSomething    string = &#34;GetSomething&#34;
+    UpdateSomething string = &#34;UpdateSomething&#34;
+    AddSomething    string = &#34;AddSomething&#34;
+)
+
+init()
+</code></pre><p>With the below code snippet, we instantiate and populate the main struct i.e. module_tests in this case, so that it can be accessible to all the tests in the file and the data can be easily persisted across tests.</p>
+<pre tabindex="0"><code>var (
+    mt module_tests
+)
+
+func init() {
+    mt = module_tests{}
+    mt.test_api = make(map[string]module_test_config)
+    mt.test_api[GetSomething] = module_test_config{
+        tests: []module_test_payload{
+            {
+                scenario: &#34;returns valid response&#34;,
+                method:   mt._GetSomething_returns_valid_response,
+            },
+        }
+    }
+    st.test_api[UpdateSomething] = module_test_config{
+        tests: []module_test_payload{
+            {
+                scenario: &#34;updates valid response&#34;,
+                method:   mt._UpdateSomething_returns_valid_response,
+            },
+        },
+    }
+}
+</code></pre><p>In this step, we make a list of scenarios and the methods that we need to execute and pair them with the key identifier that we initialized earlier. This helps immensely in readability and gives a proper idea about what tests are we going to be running. Personally, This helps me in brainstorming the scenarios before I could write tests for methods. I just write scenarios and substitute the methods with blank functions and get a hang of how I&rsquo;m going to be proceeding.</p>
+<h2 id="test-method">Test Method</h2>
+<p>In the below code snippet, we loop over the methods we have attached with the identifier and execute them one by one.
+(On a sidenote, if we are testing the method GetSomething, the test for that method will always be TestGetSomething. Golang will acknowledge this and only execute functions prefixed with Test)</p>
+<pre tabindex="0"><code>func TestGetSomething(t *testing.T) {
+    api := mt.test_api[GetSomething]
+    testcases := api.tests
+    
+    t.Cleanup(func() {
+        // Here we cleanup the tests.
+    })
+    
+    for _, testcase := range testcases {
+        t.Run(testcase.scenario, func(t *testing.T) {
+            testcase.method(t)
+        })
+    }
+}
+</code></pre><p>Here we just need to write the method once and forget about it since we just need to add more methods to the tests array, and they will be executed in sequence. We can also set up a cleanup task in t.Cleanup(func(){}) so that the garbage that was created during the test can be cleaned up.</p>
+<pre tabindex="0"><code>func (m *module_tests)_GetSomething_returns_valid_response(t *testing.T){
+    // Write the testing code here.
+}
+</code></pre><p>The following code is the stub of the function that will be executed when the tests are running.</p>
+<h2 id="putting-it-all-together">Putting it all together</h2>
+<p>Although, It was minimal explanation from my end as to what this setup does, I encourage you to clone this code and check it out yourself. To put this all together, would span a lot of unwelcoming space in this page. Hence, I have created a code snippet in my repo for you to check it out. It&rsquo;s copy-pastable (new word, yay!)</p>
+<h2 id="why-this-approach">Why this approach?</h2>
+<p>Personally, I like the code to be readable and glanceable (Thanks <a href="https://github.com/matryer">@matryer</a> for this word). I want to look at a piece of code and exactly understand what the code does. With this approach, we get the gist of what the code does in the init() function while we are writing the scenarios and the methods that the scenarios will use to further execute.</p>
+<p>This approach also helps in grouping the API functions that produce similar outputs without being tied down to writing all the functions under a Table Driven Test. I usually write the main scenarios in the init() and then run sub-scenarios that needs to be evaluated similarly, inside the stub-method in the good ol&rsquo; table driven fashion. That greatly helps in debugging and maintenance.</p>
+<p>Also, when there are a lots and lots of tests being added to the file, you will always have a link to those methods in the init() so that you can just find them all in one place. That saves me a lot of overhead, and I put that all the time in coding. It might seem a lot of prep work for just a bit of testing, but in a long run, I believe it&rsquo;s worth it.</p>
+<h2 id="wrap">Wrap!</h2>
+<p>And, That&rsquo;s a wrap! Thanks for reading. I wrote this post in a hurry without a lot of brainstorming. I just wanted to put out the workflow I have deduced and which been working quite well for me. If this helped you, or if there&rsquo;s a way to make my code even better and less-work-proned (for the kind of lazy bug I am),  please do let me know here. Have a nice day.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Nextcloud to Good Ol&#39; Dav</title>
+      <link>https://velanms.com/posts/nextcloud-to-good-ol-dav/</link>
+      <pubDate>Sun, 01 May 2022 07:22:41 +0530</pubDate>
+      <guid>https://velanms.com/posts/nextcloud-to-good-ol-dav/</guid>
+      <description>We need standards, not tools
+The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&amp;rsquo;m not able to find the person who said it, but whatever is said, is true. It&amp;rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&amp;rsquo;s horizons to a new beyond.</description>
+      <content:encoded><![CDATA[<p>We need standards, not tools</p>
+<p>The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&rsquo;m not able to find the person who said it, but whatever is said, is true. It&rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&rsquo;s horizons to a new beyond. So today I thought I would write about a web standard that made my life quite easier and that is CalDAV / CardDAV / WebDAV.</p>
+<h2 id="but-nextcloud">But, Nextcloud?</h2>
+<p>Initially, I thought that Nextcloud was a good option to have my contacts/calendars and files synced up. Nextcloud is an amazing option, but it comes with its limitations. It could viably become a good option for me if it hadn&rsquo;t become a lock-in in itself.</p>
+<p>Nextcloud provides all the above-mentioned tools. But, it is also required to run a Nextcloud instance (which sometimes becomes painstakingly difficult to figure out if something goes wrong), or pay for a cloud provider that runs a managed Nextcloud instance. Which would be expensive just for a simple backup of files, calendar and contacts.</p>
+<p>I started with their free tier plan with one of the cloud providers. However, the response times became inconsistent sometimes. They aren&rsquo;t to blame. I was using their service for free, so they had no moral obligation to be accountable towards me. So I went in search for a better, lightweight option that could give me the same convenience with more effectiveness.</p>
+<h2 id="enter-the--dav">Enter the – “DAV”</h2>
+<p>My perpetual search for convenience and effectiveness led me to DAV. I knew about DAV. But I was using it under the hood of Nextcloud, which provided the DAV service as an extension. And it was a no-brainer to run these services independently for better usability and convenience. But then I thought, better late than never and jumped right into running these on top of Docker.</p>
+<p>I already own a self-hosted server. So all I had to do was, run the services on top of Docker and expose these endpoints to the outside world so that I can use them from my other devices. So I zero&rsquo;d in onto the two Dockerhub images, they are,</p>
+<ul>
+<li><strong>bytemark/webdav</strong> for WebDAV, which runs a small Apache server with WebDAV extension. Extremely lightweight and blazing fast.</li>
+<li><strong>ckulka/baikal</strong> for CalDAV and CardDAV, which runs a fully managed Caldav and CardDAV server. Baikal is quite popular and has a good community to help just in case something goes wrong.</li>
+</ul>
+<p>And it was done. My contacts are backed up. My files are backed up. All with just two lightweight Docker images quietly doing their thing.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>The reason we need standards is that, when integrating the existing CalDAV,  CardDAV and WebDAV with my phone and desktop, I didn&rsquo;t have to run a new software to let them know how they need to parse the incoming data. Since it&rsquo;s a standard, it is already embedded into the system and the input is expected to come in such format.</p>
+<p>If the standards are widely implemented across all the tools, it&rsquo;s not as hard to make it interoperable, and it also lets the person decide how they want to experience the internet without a lot of overhead. We not just live in the world where there are lesser standard implementing tools, but we live in the world where most of the code that we run in our machines are not open sourced. Therefore, there is no way to verify its integrity. And that has become a new normal.</p>
+<p>Hopefully, there comes a time when we get to freely chat with people in Signal from Telegram (also other chat platforms) and vice versa and the lock-ins are removed completely. Hopefully, there comes a time when the person gets to decide the kind of experience they want to get from the internet. And hopefully there comes a time when I get to write about this in a happier tone. :)</p>
+<p>Thanks for reading, have a nice day.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Monthview - April 2022</title>
+      <link>https://velanms.com/posts/monthview-april-2022/</link>
+      <pubDate>Sat, 30 Apr 2022 03:30:39 +0530</pubDate>
+      <guid>https://velanms.com/posts/monthview-april-2022/</guid>
+      <description>Monthly Review of April 2022</description>
+      <content:encoded><![CDATA[<p>Monthview, because I was too lazy to write &ldquo;Month Review&rdquo;; For real; And it sounded cool too. Doesn&rsquo;t it? Well, this is not just one month view, since I haven&rsquo;t posted month reviews since last two months (because they were boring). This will include the month reviews for February and March. This is going to be a long read, so brace yourself!</p>
+<h2 id="starting-as-a-backend-engineer">Starting as a Backend Engineer!</h2>
+<p>I&rsquo;ve always been interested in backend development, primarily with NodeJS and Python (Django and Flask). Because, Backend engineering is more concerned with complex flows, algorithms, brain teasing design decisions and a level of freedom to code. Working as an iOS developer for a year reminded me of how much I missed working with backend, with the complex flows, automated tests, automated build generation, and all those shenanigans that come with backend engineering.</p>
+<p>Not that I hated iOS, I started to despise it as the time went by. The job more or less became a chore as I was expected to create UI for the design that the design team provided. Personally, that left me less room to grow and fewer things to learn as the time went by. And I don&rsquo;t plan on owning an iOS device anytime soon in the future. Therefore, I couldn&rsquo;t use my skills to contribute to someone&rsquo;s code somewhere in the remote web, even if I want to, since you need iOS hardware to do iOS stuff!</p>
+<p>Now I begin my backend journey with Golang. I&rsquo;m thoroughly enjoying the process of treading this unknown territory, as there is so much learning and so much freedom to come up with new ideas and reproduce them in code. I hope to post more about Golang and backend development in general as time passes by.</p>
+<h2 id="better-vps-better-setup">Better VPS, Better Setup!</h2>
+<p>I changed my VPS to an AMD EPYC system with NVMe SSD&rsquo;s. It&rsquo;s blazing fast and gives me lesser frustrated lookups when running heavy memory intensive work such as backup, restore, database migration, you name it. Currently, mastodon.lhin.space is running on top of it and I couldn&rsquo;t have been happier to see it being more responsive and snappy.</p>
+<p>I have written about this in detail in <a href="/posts/backup-restore-migration-a-new-vps/">this post</a>.</p>
+<h2 id="a-much-needed-bookhaul">A Much needed Bookhaul</h2>
+<p>If you&rsquo;ve been following my blog and mastodon handle for a while, you would know that I talk a lot about books. Lately, I haven&rsquo;t been reading a lot because of a busy schedule. April has been a chill month and I had plenty of time to read those unread books sitting in my shelf. They are,</p>
+<ul>
+<li>Gut: The Inside Story of our Body&rsquo;s Most Underrated Organ by Giulia Enders, Jill Enders (Illustrator)</li>
+<li>Ten Arguments for Deleting your Social Media Accounts Right Now by Jaron Lanier</li>
+<li>Your Inner Fish: A Journey Into The 3.5 Billion Year History of the Human Body by Neil Shubin</li>
+</ul>
+<p>It&rsquo;s really refreshing to read books after a long burnout break. I hope to read many more books in the coming months and hopefully write about what I felt about reading them.</p>
+<h2 id="manjaro-to-pop-os">Manjaro to Pop! OS</h2>
+<p>I have been using Manjaro for a long time. It hasn&rsquo;t complained. It has stayed boring and obvious, as it has always been. The problem occurred when I was trying to install some new packages, which constantly failed by asking for a PGP prompt. So I thought it was a good time to take off my Manjaro hat for some time and tread into Pop! OS territory. I don&rsquo;t like distrohopping a lot. But this time I couldn&rsquo;t resist. So I did.</p>
+<p>Pop! OS, just works! Out of the box. Took me just 5 mins to get up and running with it and everything just works. Now I don&rsquo;t feel like going back to Manjaro (But, I miss you pacman). I know, distros don&rsquo;t matter. But I believe it&rsquo;s fun to sometimes move away from the regular setup and try something new (at least for a while).</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>It has been an amazing and productive month, to be honest, as I sit here and think about it. That&rsquo;s why I like this segment. It gives me an opportunity to sit and think about the month and ponder about what better I could do next month. I hope to read more, write more, be more productive as the time goes by. And also learn to be more empathetic since I&rsquo;m going to write the code that&rsquo;s going to affect a lot of users. Thanks for reading, Have a nice day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Backup, Restore, Migration - a New VPS</title>
+      <link>https://velanms.com/posts/backup-restore-migration-a-new-vps/</link>
+      <pubDate>Sun, 17 Apr 2022 09:40:53 +0530</pubDate>
+      <guid>https://velanms.com/posts/backup-restore-migration-a-new-vps/</guid>
+      <description>Outlining my experiences moving from in-house selfhosted setup to a new remote VPS</description>
+      <content:encoded><![CDATA[<p>If you had been following my blog for some time, you would know that I host most of my services on a self-hosted VPS. For those who are unfamiliar, it&rsquo;s a computer located in a remote part of the world still enabling me to rent it, access it and host things on it so that me and other people can access it from any part of the world. Sounds revolutionary and exhilarating, can&rsquo;t deny.</p>
+<p>However, the VPS that I had owned earlier had a massive storage of 2 TB, for which I had to make a tradeoff with the processing speed to make it “budge” into my budget (pun intended). Why 2 TB you might ask; well, That was to store numerous photos and videos that my family and I had clicked overtime which were aggregated by a program called Photoprism. But that tradeoff didn&rsquo;t seem worth the buck, since I was aggravated by the slowness in processing, and it also became obnoxious at times.</p>
+<p>So I made a decision to migrate my setup to a new VPS.</p>
+<h2 id="but-photos-and-videos">But, Photos and Videos?</h2>
+<p>Ahhh, Wait! I know you would ask that. I moved all my photos and videos (a hefty 45 GB!) to a paid hosted media management service called ente.io. Ente is built on top of open source and peer reviewed architecture with a healthy and growing community. Therefore, they are entirely accountable to its end users.</p>
+<p>And to top it all off, they also offer end-to-end encryption to all the hosted media. I can be rest assured to know that no machine is scraping my images to figure out what sort of sandwich I ate this morning! Ente costs ₹299 / month for a 100 GB (the plan I took up amongst others), which I feel is sufficient for my needs. This is a price that I pay for a healthy space for my ideas and memories. And I believe it&rsquo;s worth it. :)</p>
+<h2 id="a-fun-backup-and-restore-routine">A fun backup and restore routine!</h2>
+<p>I&rsquo;m just going to copy and paste two lines here, which were so elegant that the whole backup and restore across two VPS&rsquo;s were a breeze. <em>[Credits: GitHub, Docker]</em></p>
+<ul>
+<li>
+<p>Backup: <code>docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH</code></p>
+</li>
+<li>
+<p>Restore: <code>docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c \&quot;cd CONTAINERPATH &amp;&amp; tar xvf /backup/backup.tar --strip 1\</code></p>
+</li>
+</ul>
+<p>This is the command that will save me a lot of hours eventually as I add more and more containers to my setup. This will also help me safely upgrade and downgrade my setup, make tarball backups (automation maybe?) as I go. A fun process, not gonna lie!</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>Moving to a new VPS reduced my expenses to 75% from the original expenses. All of this while making no compromises on the performance side of things. This makes me wonder if photos and videos storage in a personal VPS is as good as it&rsquo;s been glorified.</p>
+<p>In my opinion, a personal VPS should always be inclined towards better performance with limited storage (as a tradeoff). If storage is really required, I believe a new VPS dedicated solely on storage with limited performance (as a tradeoff) can be rented and bridged with the personal VPS via FTP. That would cost less than those two combined. That&rsquo;s just my two cents.</p>
+<p>Okay bye!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>I realized being developer is not enough</title>
+      <link>https://velanms.com/posts/i-realized-being-a-developer-is-not-enough/</link>
+      <pubDate>Mon, 21 Mar 2022 10:20:47 +0530</pubDate>
+      <guid>https://velanms.com/posts/i-realized-being-a-developer-is-not-enough/</guid>
+      <description>Lately I have come to a realization that I got to be more of a Person than a Developer in this digital world.</description>
+      <content:encoded><![CDATA[<p>We all have heroes we look up to when we are kids, right? Ever since I was pretty young, I used to look up to other developers and wonder when will I get to do all these amazing things they do. Then I grew up, became a software engineer, and I&rsquo;m already doing things that they do. But I genuinely feel there are certain things missing. In this post, I&rsquo;m just brainstorming my thoughts on this.</p>
+<h2 id="more-of-a-person-than-a-developer">More of a Person, than a Developer.</h2>
+<p>I have always had a vision to own a website someday and keep posting about the crazy things that I experiment (which now I don&rsquo;t because of my heavy schedule with work). I wanted this website to reflect the kind of developer I am. I believe every developer or a tech enthusiast in general is unique in their action plans, their ethics, their vision for the future. I have my own vision and I believe I&rsquo;ll get there someday. But, that&rsquo;s not just the only side to me.</p>
+<p>In the pursuit of becoming more of a developer, I ignored the other sides of me that adds value to my life in some other way. I&rsquo;m a musician who loves to compose music in my leisure. An art enthusiast who loves to look at art, pause and ponder about the intent of the artist. I&rsquo;m a travel freak who loves to travel to different places, meet new people and absorb their culture. I&rsquo;m also a bibliophile who loves the scent of the book as I open them and read. All of these things add up to making me as a Person.</p>
+<h2 id="what-is-my-person">What is (my) Person?</h2>
+<p>A person, according to me, is a <strong>Quest</strong>. It&rsquo;s a perpetual quest to understand the world, understand self and absorb the culture, perpetuate life in this ever-changing world. If I had to bluntly categorize the things around me in terms of metrics, I would categorize things into two distinct categories, things that can be quantified and things that can&rsquo;t be quantified. You could easily quantify your finances with currency and richness in terms of money you make. This quantification give you a distinct measure of where you stand in the society (If you are into such measurements).</p>
+<p>However, there are certain things that you can&rsquo;t quantify. Happiness, Friendship, Love to name a few. These don&rsquo;t have quantification since they are subjective measures. We can not objectively decide how to measure love, friendships. Since they are immeasurable, there is a certain mystery around them, and it leaves us room to be poetic, prophetic or romantic around them. This is the kind of mystery that adds color to my life, since it keeps me going to understand those mysteries better. Questioning these mysteries leads me to ever more profound answers that makes the process more interesting.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>All these unquantifiable mysteries adds up to my quest to be more of a person. Lately I had been living the life of a just-developer and when I see it now, it feels a lot two-dimentional. My personhood, that adds more depth to this two-dimensional lifestyle, had been missing all along.</p>
+<p>Therefore, I would spend my time making music, involve and lose myself in art, involve myself in gardening (not yet sure though), and also just be more of a happier person overall. I would reflect this attitude over to my online handles and try to involve with diverse people doing diverse stuff and try to learn as much as possible from everyone. Being a developer is a just a side to me among a lot of other sides that I have. Acknowledging this fact will help me live a fuller life, I believe :)</p>
+<p>Good day.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Re-kindling My Relationship With Paperbacks</title>
+      <link>https://velanms.com/posts/rekindling-my-relationship-with-paperbacks/</link>
+      <pubDate>Sun, 20 Feb 2022 09:52:36 +0530</pubDate>
+      <guid>https://velanms.com/posts/rekindling-my-relationship-with-paperbacks/</guid>
+      <description>After using Kindle eReader for roughly two years, I&amp;#39;m getting the urges to bounce back to Paperbacks. And here&amp;#39;s why..</description>
+      <content:encoded><![CDATA[<p>When I first bought a Kindle device, it seemed like this tech was a game changer. it still does (to some degree of course). One device to satisfy all of my book-reading needs. I was essentially carrying an entire library on my backpack. I literally had to save money to buy a kindle back then since I was in college. But it was worth it. And since, I had put so much effort into buying the kindle, that added an extra layer of attachment. I thought this is the best thing an avid bibiliophile can ask for.</p>
+<p>Few days ago I revisited my bookshelf, took off some old paperbacks and turned some pages around. And I kid you not, I can&rsquo;t tell you how much I had missed that old, coal firey kind of smell welcoming me when I started reading something. That made me wonder, was my switch to Kindle really worth it?</p>
+<h2 id="why-switch-to-kindle">Why switch to Kindle?</h2>
+<p>Well, no kidding, I love the smell of paperbacks. And I haven&rsquo;t seen anybody else who doesn&rsquo;t, so I think I won&rsquo;t be judged. The first thing I do before reading a book is smell it. However when I was out, I used to carry my books around and that added an extra layer of luggage and sometimes when books were thick af, carrying them in hand was extremely inconvenient.</p>
+<p>I try to keep my belongings as minimal as possible so that I can have a convenient life in as little as possible. All those things obviously points towards buying an eBook reader and there isn&rsquo;t an eBook reader which is as cheap and as efficient as a Kindle (Sorry <a href="https://gl.kobobooks.com/collections/all?utm_source=Kobo&amp;utm_medium=TopNavTest&amp;utm_campaign=All_ROW">Kobo</a>, No hard feelings now, after two years). So as much as I hate to be in an ecosystem, I thought this was a good tradeoff to make between convenience of reading ebooks and a little bit of Amazon ecosystem.</p>
+<h2 id="back-to-paperback">Back to Paper&rsquo;back&rsquo;??</h2>
+<p>Yes. While I was too involved reading books in the eBook reader to accomodate as little of anything possible, I underestimated the experience Paperbacks have to offer! I remember when I was too much into Paperbacks, I used to spend my time organizing my shelf, going through the highlights, reading the notes and much more. But with the eBook reader, all those happen automagically in the software.</p>
+<p>I have understood that no matter how much technology evolves to accomodate and represent real world entities in software, there are certainly losses we suffer which we get used to given enough time. That doesn&rsquo;t necessarily mean, the technology has just made our lives easier by reducing and easing out complex tasks. Sometimes there is some amount of joy and fun getting involved in that complexity. It&rsquo;s upto us to figure out where we would rather lead to.</p>
+<p>And there are certainly pressing (philosphical, kinda) questions such as, &ldquo;Technology has the capability to make impossible, possible. And amidst this endless ocean of opportuunities, are we really making our lives better or worse? If we can make our lives better, how?&rdquo; These are the kind of questions I ponder with. And this organic feeling of Paperbacks have made me realize that not all digital technology touches lives, they just make it convenient and easier.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Maybe, The Technology Evolved Too Fast</title>
+      <link>https://velanms.com/posts/the-technology-evolved-too-fast/</link>
+      <pubDate>Fri, 04 Feb 2022 11:43:56 +0530</pubDate>
+      <guid>https://velanms.com/posts/the-technology-evolved-too-fast/</guid>
+      <description>In this post I speak about my thoughts about the current state of technology and what I miss about the (perceived) old times.</description>
+      <content:encoded><![CDATA[<p>Last weekend, my mum and I were going through the old photo albums and archive of old times that were stashed in the cupboard. My mum held onto a piece of paper that was unnaturally torn and withered in nature. However, she held onto it as if it was very valuable to her, and it brought a smile to her face. And of course it was. It was a letter written by my dad while he was away for work.</p>
+<p>Back in 1997-98, when I was a small boy, my dad used to stay far away from us for work. He has been away working for years. Yet, he sent so many letters which would take months to reach home. Even though those letters are so many years old, they still hold so much value to my mum. That made me wonder, why doesn’t that happen to us when we send messages across? If technology was supposed to bring people together, why doesn’t it evoke the same feelings as those not-so-techy letters?</p>
+<p>So I started to think deeply about it and decided that I would write about the things I brainstorm. Guess it&rsquo;s going to be a long explainer. So brace yourself :)</p>
+<h2 id="correlation-between-efforts-and-value">Correlation between efforts and value</h2>
+<p>Naturally, any tangible or intangible asset gains value when the reproducibility of it is difficult or expensive. For example, Gold has value because there is only a finite amount of it in this world and the reproducibility of this asset is extremely expensive. You can apply this logic to anything, and it would still fit.</p>
+<p>Applying the same logic to the letters, it turns out that writing a letter is a time intensive process. The farther the person is, the more time it would take in the delivery of the letter. So, you would also have to compensate for that buffer time in advance. All in all, there is a significant amount of time and brain work involved in writing/posting the letters. And that buffer and efforts involved, give those letters a certain value. When you are the recipient, you know that the person who wrote it, has put a significant amount of efforts into them and that makes them valuable because they are not as easy to reproduce.</p>
+<p>The intermediaries of communication, (in this case the letters) play a significant role in deciding how our human to human relationships are cherished and experienced. In other words, the intermediaries of communication IRL influence human relationships.</p>
+<h2 id="fast-forward-two-decades">Fast-forward two decades</h2>
+<p>It’s 2022 and the technology has engulfed the entire world. Why write letters when you can type something and send it to any corner of the world in just a matter of seconds! You don’t have to put efforts into writing the letter, writing the address, posting it. All this long and effort-invoving tasks are a thing of the past now.</p>
+<p>However, just think for a moment.</p>
+<p>Did we actually lose that special feeling that the intermediaries of communications provide when we evolved to use better technology with time? In my opinion, we sure have.</p>
+<p>Was it really worth it? I’m not really sure.</p>
+<p>Is there a better way? There should be. That’s what we humans are good at. We figure out a way to solve the problem better than any other organism in this entire world. (Unless you are a bot who is reading this)</p>
+<p>But I think now we are locked-in with this trend, and it’s going to be very hard to change or refine (if it requires change or refinement) this system since the entirety of the population is dependent on it.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I’m not criticizing the evolution of technology here. I know the evolution is perpetual, and technological evolution seems like an obvious way to move forward. However, we might have collectively chosen a path forward too quickly.</p>
+<p>I’m by no means an expert in this field. If my take on this topic is blunt, consider me irrelevant. But I really do miss the special feeling of writing those letters. I have written letters before, and I still have the letters that I have received from my loved one’s. But I haven’t had the impulse to store the messages, just like I have done with letters. They don’t make me feel as special as letters do. That makes me suspect that we evolved too quickly with technology and these constructs of modern messaging and communication are locked in with our day-to-day life.</p>
+<p>We sure are losing a special touch of human to human communications with the new constructs, and there should be a better way of building these blocks of communications. The one’s that actually makes you feel special the way letters do. I’m not sure if it’s possible sometime in the future, or if my take on this topic is blatant or nonsensical. But as a technophile / technologist, all I can do is hope for a better future.</p>
+<p>Have a good day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Monthly Review: Jan 2022</title>
+      <link>https://velanms.com/posts/monthly-review-jan-2022/</link>
+      <pubDate>Mon, 31 Jan 2022 08:57:21 +0530</pubDate>
+      <guid>https://velanms.com/posts/monthly-review-jan-2022/</guid>
+      <description>A succint overview of how the month of January went by!</description>
+      <content:encoded><![CDATA[<p>Ah, January! The month where we make so many new year resolutions in the beginning just to realize we were not able to hold onto any of those as days pass by. Jokes apart! I did make resolutions this time, and I think I was able to hold onto some of those. Given the fact that I&rsquo;m worse at keeping the resolutions that I made to myself, I&rsquo;m off to a good start (I think).</p>
+<h2 id="new-blog-new-promises">New Blog, New Promises!</h2>
+<p>Earlier I used <a href="https://ghost.org/">Ghost</a> to upload all my blog posts and My Ghost met with a disaster! Yeah, that was my mistake though because I forgot to make backups! (neglected could be the right word, but meh!). Anyway, we learn from our mistakes, I sure did. So I bounced back to <a href="https://gohugo.io/">Hugo</a> instead.</p>
+<p>Me and Hugo have got this complicated relationship. I move away from Hugo just to come back to it after a few months! And I think you start to realize how much you loved something only when you are away. So Hugo, I&rsquo;m back! (And hopefully I&rsquo;ll stay, please don&rsquo;t mind). I&rsquo;m back using Hugo to render my static website and the content is backed up over codeberg. So the first thing I did this month was to get my website sorted. And sure it did!</p>
+<h2 id="fediverse-and-lhinspace">Fediverse and lhin.space</h2>
+<p>Among all my projects, maintaining <a href="https://services.lhin.space">Legohouse in Space aka. lhin.space</a> has been my favorite. Never in my life ever I had the chance to have immense control over my ecosystem while giving others an option to have the same liberty to share the same space. I love fediverse and I truly believe this is going to give people freedom and add value to their life.</p>
+<p>So This month lhin.space saw two major updates</p>
+<ul>
+<li><a href="https://github.com/pixelfed/pixelfed/releases/tag/v0.11.2">Pixelfed</a> (pixelfed.lhin.space) was updated to version 0.11.2</li>
+<li><a href="https://github.com/matrix-org/dendrite/releases/tag/v0.6.0">Dendrite</a> (chat.lhin.space) was updated to version 0.6</li>
+</ul>
+<p>This has been fun and I hope to continue maintaining these for years to come :)</p>
+<h2 id="next-month">Next Month?</h2>
+<p>I&rsquo;m planning to add more sections to this website namely &ldquo;uses&rdquo; (where I write about the tools I use to manage my life) and &ldquo;elsewhere&rdquo; (where I write about my contact details). And also get my website listed under 512Kb Club.</p>
+<p>Since I don&rsquo;t plan my month ahead, I&rsquo;m not really sure how it goes. Hopefully it stays productive. Good day :)</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Ecosystematic Walls of Incarceration </title>
+      <link>https://velanms.com/posts/ecosystem-incarceration/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/posts/ecosystem-incarceration/</guid>
+      <description>Just a little motivation for you to get out of that ecosystem</description>
+      <content:encoded><![CDATA[<p>&ldquo;Leave this ecosystem? No way! Why should I leave it when they are providing everything for free and it&rsquo;s so convenient when everything is just there when you want it!&rdquo; Yep! This is me approximately one year ago when I was heavily tied into the Google Ecosystem and I had been totally involved in all aspects inside this Ecosystem for five to six years straight. And it took me couple of months to actually explore the internet and discover why it was a bad idea. It&rsquo;s very easy to say that any service on the internet is convenient because it makes your life so easier. However, every convenience comes with a cost. In here, your freedom of choice and your privacy is at stake!</p>
+<h2 id="the-problem">The Problem</h2>
+<p>I didn&rsquo;t find the idea of moving out of my ecosystem was considerable because my Ecosystem  seemed like my &lsquo;Eden Garden&rsquo; where everything I wanted to do was in my hand&rsquo;s reach. Want to store and retrieve photos easily? Use Google Photos. Want to store your documents? Use Google Drive. Want to edit those documents? Use Google docs. Want to add your photos to those documents? Google photos is integrated with Google docs. It&rsquo;s as if the your Ecosystem knows what you want to do even before you even think of doing it. This nature of an Ecosystem poses us with two big problems.</p>
+<ul>
+<li><strong>Privacy :</strong> Your Ecosystem knows a lot about you already to understand what you would possibly want to do (Only if it&rsquo;s collecting your data which is  what most of the ecosystems do).</li>
+<li><strong>Restriction :</strong> Your Ecosystem confines you inside its walls restricting you from even thinking about migrating from your services because if you do, you may have to give up some of that convenience. And it&rsquo;s gonna take a lot of time to unhook the hooks the ecosystem puts on you.</li>
+</ul>
+<p>Privacy in an Ecosystem is a bigger discussion in itself. I want to specifically talk about the second one where it confines you inside its walls, which had happened to me. Convenience is like a drug (to put it bluntly). And even if I had known that my ecosystem tracks me 24/7, I was reluctant to give away my convenience. When you are heavily tied into an Ecosystem, you stop looking for other services which are clearly better because whatever your Ecosystem provides is the one that would work best for you in the current state and even if it&rsquo;s something crappy and something you didn&rsquo;t like, you would have to live with it. This is how the Ecosystem suppresses your freedom of choice by making you enslaved for what you are being provided, not for what you have demanded. That is basically monopolistic nature put into digital media.</p>
+<h2 id="the-realization">The Realization</h2>
+<p>Last year, I chose to read <a href="https://en.wikipedia.org/wiki/Permanent_Record_(autobiography)">&lsquo;Permanent record&rsquo; by Edward Snowden</a>. It really changed my outlook and it made me question my online presence. It was really implicative when I looked back at my &ldquo;Ecosystematical&rdquo; lifestyle and how much I was missing out on the true essence of what makes the internet special. And, I decided I would migrate my data to those services that are clearly better and explore the wide world out there. And the journey was painfully slow because I had an archive of 50+ GB&rsquo;s of photos in Google Photos and most of my documents were backed up in Google Drive.</p>
+<h4 id="the-takeout-process">The Takeout Process</h4>
+<p>Google has a takeout program where you can select all of your data and then request for a copy. Google then aggregates your data and then compresses them down to a zip file. You&rsquo;ll get an email in your gmail inbox. Then you can download your data through the link. Easy right? No!!</p>
+<p>What Google does, is it lets you choose how big of a data chunk you want to download. Say you have an archive of 20GB, you can download it in two chunks of 10GB each or 10 chunks of 2GB each. And those downloads will fail if your internet connection drops down certain threshold. Then you need to retry. If it fails more than 3 times, you need to request for the data again. Most of the people would give up here and choose to spend some more time in this ecosystem until they try again and the cycle repeats.</p>
+<p>I had to request for my data thrice and I still couldn&rsquo;t download all my data. And the only inconvinient process around the whole ecosystem was the takeout process. I don&rsquo;t know if it was done deliberately, but I had to let go of my 50GB+ of archive which had very important documents and photos. My <em>Eden Garden</em> was punishing me when I decided to move away from it.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>The solution is to move towards open source projects or towards the services that focus on your privacy. When any service focuses on your privacy, it just means they value you as an end user. Internet means Freedom. So, you should be the one who own your free will to navigate around and call yourself at home. It sure takes a lot of trial and errors to make yourself comfortable by finding a balance between convenicence and digital privacy. But it&rsquo;s gonna be worth it. The more private you go, less convinient your experience will be. However, there are so many alternatives on the world wide web which is enough for you to build your own convenient ecosystem.</p>
+<p>You might want to look at <a href="https://nextcloud.com/">NextCloud Project</a> which is a self hosted cloud solution which has plugins for any use case that you might have.</p>
+<p>If you want to start self hosting cheap and best, you might want to look at <a href="https://www.raspberrypi.org/">Raspberry Pi Project</a> which is a credit card sized computer which can be used to host your self hosted setup which can be scaled further in future. The possibilities are endless.</p>
+<p>So, Instead of living in someone else&rsquo;s Eden Garden where you live in their terms, why don&rsquo;t you make your own Garden and live by your terms. Isn&rsquo;t that what freedom tastes like?</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Simple file upload using Koa.js (or Node.js in General)</title>
+      <link>https://velanms.com/posts/file-upload-koa-js/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/posts/file-upload-koa-js/</guid>
+      <description>A post about how to use Koa.js to upload files</description>
+      <content:encoded><![CDATA[<p>I have been using Koa.js for a while now and it turns out to be great. I’m having a lot of fun playing around with it since its simple and configurable. And I was searching for a <em>ground up</em> way to execute file uploads so that I can tweak its functionality however I want to. And it turns out, It’s not as difficult as I thought. Before going forward, I’m assuming you have a basic knowledge of how to setup basic Koa.js server with routers since it’s being covered in so many articles. So I’ll be skipping the server setup with routers. <a href="https://medium.com/@adam_bickford/creating-a-basic-site-with-koa-pt-1-f3e1711f7a9">Click here</a> if you want to go through an article that covers the same. So, Lets get coding. 😉</p>
+<h3 id="server-page--appjs">Server Page : app.js</h3>
+<pre tabindex="0"><code>// app.js
+const Koa = require(&#34;koa&#34;);
+const koaBody = require(&#34;koa-body&#34;);
+const logger = require(&#34;koa-logger&#34;);
+
+const router = require(&#34;./router&#34;);
+
+const app = new Koa();
+
+app.use(koaBody(
+    { multipart: true }
+));
+
+app.use(logger());
+
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(3000, () =&gt; {
+    console.log(&#34;Listening at 3000&#34;);
+});
+</code></pre><p>The above app.js file starts up the server and starts listening in port 3000 for requests. Simple stuff, nothing fancy. But things to be noted are the koa-body module and <code>{ multipart : true }</code> option. This part is really important, since koa-body parses the request body and populates Koa <code>ctx</code> object based on the form data being sent. When a file is being sent from the front-end, koa-body parses the request and the uploaded file attributes will be available under <code>ctx.request.files</code> which we can then access across Koa server to implement file upload functionality</p>
+<h3 id="router-and-upload-logic--routerjs">Router and Upload Logic : Router.js</h3>
+<p><em>Well, Its not a good practice to add the server logic under router.js file since router is only used for routing the requests. You will have a controller file to take care of the logic when the request is being routed from router. But for the course of this tutorial, I have written the logic in the router itself.</em></p>
+<p>In this part, you will need a package called promisepipe which I’ll explain in a second. For now, install the package by running the following command. And create a folder named uploads in the root of the project which will hold uploaded images.</p>
+<pre tabindex="0"><code>npm install promisepipe
+</code></pre><pre tabindex="0"><code>// router.js
+const Koa = require(&#34;koa&#34;);
+const Router = require(&#34;koa-router&#34;);
+const promisePipe = require(&#34;promisepipe&#34;);
+const fs = require(&#34;fs&#34;);
+const path = require(&#34;path&#34;);
+
+const router = new Router();
+
+router.get(&#34;/&#34;, (context, next) =&gt; {
+    context.body = &#34;Hey&#34;;
+});
+
+router.post(&#34;/upload&#34;, async (context, next) {
+    try {
+        const uploadfile = context.request.files.file;
+        const savefile = `${Date.now()}#${uploadfile.name}`;
+        const readStream = fs.createReadStream(uploadfile.path);
+        const writeStream = fs.createWriteStream(path.join(&#34;uploads&#34;, savefile));
+        await promisePipe(
+            readStream.on(&#34;error&#34;, () =&gt; {
+                throw new Error({
+                    errors: &#34;File Read Error&#34;
+                });
+            }),
+            writeStream.on(&#34;error&#34;, () =&gt; {
+                throw new Error({
+                    errors: &#34;Write Error&#34;
+                });
+            })
+        );
+        context.body = {
+            message: &#34;File Uploaded&#34;
+        };
+    } catch (err) {
+        console.log(err);
+        context.body = {
+            message: &#34;There was an error&#34;,
+            errors: err
+        };
+    }
+});
+
+module.exports = router;
+</code></pre><h3 id="the-upload-logic">The Upload Logic</h3>
+<p>Anything that is written in the bold letters in router.js is important and I’ll be explaining the mode of execution one by one.</p>
+<ul>
+<li>
+<p><strong>/upload :</strong> This is the POST route handler that contains the logic of what needs to be done when the front-end makes an upload request with a file attached to its body. When the URL is hit, the function gets executed.</p>
+</li>
+<li>
+<p><strong>uploadfile</strong> : File attributes from parsed context.request.files.file in uploadfile stored in this variable so that its easier to access it later on in the code. In simple words, uploadfile contains the reference to the file to be uploaded to the server.</p>
+</li>
+<li>
+<p><strong>savefile</strong> : The file name to be stored in the folder has to be unique since the same name will be stored in the database to trace down the files from the folder later. So we use <code>{Date.now()}#${uploadfile.name</code>to create unique name <em>(where <em>uploadfile.name</em> is the name of the file to be uploaded)</em>. Which will give us a string of 1560234246152#anyfile.txt for example. Since we add the timstamp, filename stays unique and it will be stored in savefile variable.</p>
+</li>
+<li>
+<p><strong>readStream/writestream</strong> : Stream is nothing but a flow of bits from one end to another end. In here, we create a read stream from user’s local computer and write stream to server’s uploads directory. We pass uploadfile.path which contains user’s local file’s path and uploads folder to write stream. That sets up the stream needed for the upload.</p>
+</li>
+<li>
+<p><strong>promisePipe</strong> : promisePipe is a package that takes in two streams ( read / write ) and starts reading from read file to the write file. In here, bits from the user’s local computer file will be written in streams to the uploads directory on the server with the name mentioned in the variable savefile . The best thing about promisepipe is it returns a promise. It returns a resolved response when the uploading is done or returns the rejected response when there is an error. So we can await untill the uploading is done and continue executing code thereafter, or we can use try/catch block to catch any errors while uploading and handle it.</p>
+</li>
+</ul>
+<p>By the end of execution, file will be saved in uploads folder and its name will be stored in savefile variable which can be added to the database for tracking down the files when they are requested. And if there is an error while reading or writing, it will be caught by the catch block and valid response to the front-end will be sent.</p>
+<h3 id="summing-it-all-up">Summing it all up</h3>
+<p>Koa.js is an amazing lightweight configurable framework for Node.js. And arguably, There could be tons of better ways to achieve the same results but this turned out to be the best one for me where i can configure the functionality from the ground up. So if you know of any way to make this code better with added functionalities, I’d look forward to hear it from you. Happy coding. Have a nice day 😄</p>
+<h3 id="important-links">Important Links</h3>
+<ul>
+<li>
+<p><strong>Koa.js</strong> :
+Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more. <a href="https://koajs.com/">https://koajs.com/</a></p>
+</li>
+<li>
+<p><strong>koa-body</strong> :
+A Koa body parser middleware. Supports multipart, urlencoded and JSON request bodies. <a href="https://www.npmjs.com/package/koa-body">https://www.npmjs.com/package/koa-body</a></p>
+</li>
+<li>
+<p><strong>promisepipe</strong> :
+Pipe node.js streams safely with Promises. <a href="https://www.npmjs.com/package/promisepipe">https://www.npmjs.com/package/promisepipe</a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Docker, a replacement of Virtualenv for Python developement</title>
+      <link>https://velanms.com/posts/docker-as-virtualenv/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/posts/docker-as-virtualenv/</guid>
+      <description>A post about using docker to improve the workflow related to python development</description>
+      <content:encoded><![CDATA[<p>Docker! Sounds fancy and simple but trust me it has revolutionized how the tech industry builds, ships and deploys the applications lately. <strong>Docker</strong> is basically a mini-operating system where you build and run your applications which is totally isolated from the native operating system in your computer, and the same container can be deployed in the hosting platforms. If you are new to docker and want to learn more about its intricacies, i highly encourage you to go through the links given in the end of this article to learn more about it. So let’s get right in :)</p>
+<h3 id="creating-a-dockerfile">Creating a Dockerfile</h3>
+<p>Dockerfile is the recipe of an image. Dockerfile specifies how your image should look like. However, we are not creating an image from the scratch. We will take the existing image and add our dependencies on top of that to create a customized image based on our requirements. You can setup the Dockerfile to either take the existing requirements.txt file and install dependencies from pip or install dependencies manually without requirements.txt. This is how the Dockerfile will look like in either of the situations.</p>
+<pre tabindex="0"><code>    FROM python:3
+
+    RUN mkdir /usr/src/app
+    WORKDIR /usr/src/app
+
+    # Below two steps are valid only if you have
+    # requirements.txt in the project folder
+    COPY requirements.txt .
+    RUN pip install -r requirements.txt
+
+    # If there is no requirements.txt,
+    # You can install individual packages as follows
+    # RUN pip install &lt;package-1&gt; &lt;package-2&gt;...&lt;package-n&gt;
+</code></pre><ul>
+<li>
+<p>FROM: The image that we are building has to be built in such a way that we take an existing image and add our own functionalities to it. So we are choosing an image with python 3.x since we are dealing with Python developement. However, You can choose any image or any version you want.</p>
+</li>
+<li>
+<p>RUN: This will run a command inside the image. Since our image is a mini linux OS (usually debian distribution) we can run linux commands inside it. Here we run mkdir /usr/src/app which creates a working directory for our application to run. Which is not absolutely necessary since its automatically created in the next step. This step was a demonstration of how to run commands inside an image.</p>
+</li>
+<li>
+<p>WORKDIR: This specifies the working directory of our image. After setting the WORKDIR, Any RUN, CMD, ENTRYPOINT, COPY and ADD commands we execute, will be executed inside the WORKDIR . In our case, its /usr/src/app .</p>
+</li>
+<li>
+<p>COPY: This command will copy any file specified on the left before the space to the directory specified on the right of the space. In our case, we are copying requirements.txt from our project folder on the host to our WORKDIR /usr/src/app in the image And running pip install -r requirements.txt on /usr/src/app which will install and save all the pip dependencies inside the image.</p>
+</li>
+</ul>
+<p>If there is no requirements.txt, you can skip the COPY step and install pip dependencies by specifying the pip install <!-- raw HTML omitted --> command in the RUN section one after the other. And save the Dockerfile with the name Dockerfile</p>
+<p>We successfully created a recipe of how our image should look like, now the next step is to build the image based on this recipe.</p>
+<h3 id="building-from-the-dockerfile">Building from the Dockerfile</h3>
+<p>Now since we are done with creating our recipe, we need to build our own image from the recipe. To build the image, the command is as follows</p>
+<pre><code>docker build -t python/pack .
+</code></pre>
+<p><strong>docker build</strong> is the command that tells docker that we need to build our own image. <strong>-t python/pack</strong> is where we add our own name for the new docker image. we can also add tags to the image using -t python/pack:latest where latest is the tag for the image. (although latest is a default tag for any new image) <strong>.</strong> tells the docker to use the current directory in lookout for Dockerfile . If the Dockerfile lies in different directory, you can specify the path from where you would want to build the Dockerfile . Once the build is finished, you will have a Customized docker image based on your recipe, and you can check it by running docker images command in the shell. You should see an image called python/pack</p>
+<h3 id="creating-a-container">Creating a Container</h3>
+<p>Containers are the place where we execute our programs by mounting our local volumes to the container volumes. From where you can access the packages and dependencies installed in the container meanwhile, persisting the data to the host system. Run the following command in bash</p>
+<pre><code>docker run --rm -it \
+-u $(id -u):$(id -g) \
+-v /etc/passwd:/etc/passwd \
+-v $(pwd):/usr/src/app \
+python/pack \
+bash
+</code></pre>
+<p>This creates a container based on the image python/pack where you can accesss your project files from the directory /usr/src/app and then you can execute the code as you would do in your host machine. Lets break this command down line-by-line:</p>
+<ul>
+<li>
+<p>docker run &ndash;rm -it : docker run tells the docker daemon that we want to create a new container, **-it **is where we run this container in the interactive mode. -i basically keeps the STDIN open and -t allocates a pseudo TTY. In simple words, -it is essential to open a bashshell inside the container, later. You can also use <strong>-d</strong> instead of <strong>-it</strong> which starts the container in detached mode, which starts the container in the background.</p>
+</li>
+<li>
+<p>-u $(id -u):$(id -g) : It is not recommended to start a container as a root user. So we specify -u flag and then user ID $(id -u) and group ID $(id -g) to start a container as a regular user. Now we will have previliges over only that directory which is mounted to the container and not the entire container. This is the cleaner way of creating a container.</p>
+</li>
+<li>
+<p>-v /etc/passwd:/etc/passwd: This -v argument mounts /etc/passwd of the host to /etc/passwd of the container. Otherwise the docker container can’t access the usernames and display I have no name! in the bash prompt. Mounting /etc/passwd solves this problem.</p>
+</li>
+<li>
+<p>-v $(pwd):/usr/src/app: This -v argument mounts your project directory to /usr/src/app by doing which you can access your code in the project directory inside the docker container and the changes made inside the docker container will be available in the project directory (pwd prints the present working directory). So in simple words, this creates a shared space between the container and the host machine from where the host machine can access the packages and dependencies installed in the docker image.</p>
+</li>
+<li>
+<p>python/pack: This is pretty straight-forward. This is where we mention, which image is the container will be based on. The resulting container will contain the architecture of the mentioned image.</p>
+</li>
+<li>
+<p>bash: This is where we mention the command to be executed soon after the container is created. Since we want the bash prompt, we specify the command bash which opens a bash shell soon after the container is created.</p>
+</li>
+</ul>
+<p>By the end of this process, we will have a container which is built with the dependencies we need, sharing a same space as our project directory, totally isolated from out host machine. This is really useful since the dependencies are not installed in the host machine. The host machine only contains the project folder but it runs inside the customized container. Clean stuf !!</p>
+<h3 id="extrastroubleshooting">Extras/Troubleshooting</h3>
+<ul>
+<li>
+<p><strong>Editing a Docker Image :</strong> Let’s say you have created a Docker image with 3 packages and now you want to install a new package to the already built image. You can do it by editing the imageDockerfile and running the same command docker build -t python/pack . and docker will make changes to the existing image from where the content of the Dockerfile has changed. To make these changes, it is important to note that Dockerfile is in the same folder as it was initially built. Because Docker daemon uses current Dockerfile folder as a build context and when changes to the Dockerfile is made, build context will be checked and from there the Image will be built.</p>
+</li>
+<li>
+<p><strong>Port Forwarding :</strong> Port forwarding is such a useful functionality inside docker container. Let’s say you are using Jupyter notebook inside your docker container and it exposes a port 8888. But it will be on the context of the container, and not on the host machine. So if you go to localhost:8888 in the host machine, it won’t work. So you map the host’s 8888 port to container’s 8888 port when creating the container and then you can access jupyter notebook by going to localhost:8888 on the host machine. You can map a port by adding -p 8888:8888 when creating the container where left side of the : is the port on the host and the right side is the port on the container.</p>
+</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Docker is a revolutionary tech, there is no doubt about that. Once the developement is over, the developed project can be containerized and the container can be deployed in hosting platforms like Digital Ocean. Containers can be made to talk to each other and each container can be used as a microservice. The possibilities are endless. It depends on you how would use this tech to the fullest. Happy coding :)</p>
+<h3 id="essential-docker-commands">Essential Docker Commands</h3>
+<ul>
+<li>Pull Image from Dockerhub : <code>docker pull &lt;image name&gt;</code></li>
+<li>Build a Docker Image : <code>docker build -t &lt;image name&gt; &lt;path&gt;</code></li>
+<li>Create Docker Container :
+<code>docker run [-it/-d] --rm -u &lt;user id&gt;:&lt;group id&gt; -v &lt;host directory&gt;:&lt;container directory&gt; -p &lt;host port&gt;:&lt;container port&gt; &lt;image name&gt; &lt;initial command&gt;</code></li>
+<li>List Running Container : <code>docker ps</code></li>
+<li>List All Containers : <code>docker ps -a</code></li>
+<li>List All Container ID&rsquo;s : <code>docker ps -aq</code></li>
+<li>Delete Single Container : <code>docker rm &lt;container id&gt;</code></li>
+<li>Delete All Docker Containers : <code>docker rm $(docker ps -aq)</code></li>
+<li>List all Images : <code>docker images</code></li>
+<li>List all Image ID&rsquo;s : <code>docker images -aq</code></li>
+<li>Delete single image : <code>docker rmi &lt;image id&gt;</code></li>
+<li>Delete all images : <code>docker rmi $(docker images -aq)</code></li>
+<li>Start Interactive session with a container started in detached mode (-d) : <code>docker exec -it &lt;container_name&gt; bash</code></li>
+</ul>
+<h3 id="important-links">Important Links</h3>
+<ul>
+<li>
+<p><a href="https://docs.docker.com/install/">Installing Docker</a></p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/install/linux/linux-postinstall/">Post Installation Steps</a></p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/engine/reference/builder/">Dockerfile, full reference</a></p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/compose/compose-file/">Compose file reference</a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Lego Coding</title>
+      <link>https://velanms.com/posts/lego-coding/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/posts/lego-coding/</guid>
+      <description>My Journey of Building Lego Castles with Code</description>
+      <content:encoded><![CDATA[<p>Sounds Ridiculous! isn’t it ? Me comparing the Megabytes or Terabytes of senseless one’s and zero’s of code to something that is built with Lego bricks. Lego is supposed to be a fun process, right? But coding seems like spending too much time in front of the computer finding which semi-colon did you miss and where! And bang your head to the wall until you get it right. They’re nowhere close to a match. How is that even possible?
+Yeah! you might say that rather sarcastically, or had that notion in your mind all along. But trust me, this is a perfect analogy that I can put forth when it comes to the creative process of coding in its entirety. I call it Lego Coding. And it is something that you are already familiar with, but never acknowledged it for how amazing it really is.</p>
+<p>When I was 11 years old, I got my first real personal computer as my Birthday gift (The best birthday gift ever). Being a tech-geek, and being obsessed with pressing random keys in the keyboard for a mere fascination of seeing something on the monitor, coding was not my first intent. Moreover, I didn’t even know a process called ‘coding to makes wonderful things’ existed back then. I, the kid, who was building castles with Lego bricks and breaking it to build new one’s, came across coding C and C++, few years later. And it caught my attention right away. So I did what most of the budding computer geeks and beginners to the art of coding do, you guessed it,</p>
+<p><code>printf(‘Hello My Computer, It’s your boi, Velan’);</code></p>
+<p>(I might have missed the semi colon in my first few attempts, but you get the point 😂) When I saw the output in the black screen, I was freaking out. Running around the house, shouting “My Computer knows my name”. It sounded ridiculous, yet amazing, that you can teach your computer to do things, and it just obeys you without arguing! That is how I was introduced into the art of coding. And it didn’t seem like something that is a tedious process of finding missing semi-colons, (Sometimes I do feel like banging my head against the wall, Sometimes) But It seemed more like building things that I love, with Lego bricks that I was obsessed with, prior to coding. It made me feel curious and expressive. It made me feel like, I can do anything and everything using my creative intent and my computer. And that kept me going to build things with code.</p>
+<p>Growing up, I took an academic path where there is a lot of coding and computer science involved, because that is what I was interested in. It was a place of ecstasy to me, where i’m officially experimenting with things that i love doing. But, to my surprise, I was astonished to see not everyone was engrossed into the process of coding as much as I was. And when my fellow student said “I don’t like coding!”, My obvious reply was, “Are you freaking kidding me? How can you even not love playing Lego with code?”. Gradually I realised that, not everyone was introduced to coding like I had been. Not everyone coded because they loved the process, or I could say, They were never enchanted by the thought of playing Lego with code. While I saw C, C++ and other tools as Lego bricks that I can build my castles with, few others saw it as an ‘Academic-Getaway-Pass’ That can get them into introductory interviews, by showcasing good marks. And it was a let down to see an Art getting wasted, By people turning into primary job seekers than turning into primary artists who can build things they love.</p>
+<p>Now i’m 21 years old and, I have been coding ever since. Playing Lego with code never gets old to me. And I can’t think of any other analogy that explains the process any better. I‘m never frightened by errors popping up in my code (Trust me, I get so many of them), besides I get frightened when I don’t get one 😂. And coding has kept my childlike creativity and imagination going, and it has given me a new dimension to think about things that I would never have thought otherwise. I don’t code to save someone’s time or save this world from apocalypse or get people on mars, perhaps. I code because i’m enchanted by the mere process of coding as building something that I love, by keeping lines of code one on top of the other and create a system that is as beautiful as my Lego castle was. If my code goes on to save someone’s life or time, I’m glad it did. But my primary intent always remains to code because I love to do it. Nothing complicated. And I&rsquo;ve never been tired of it, Nor will I ever be.</p>
+<p>If you are someone who doesn’t like coding or someone who doesn’t know where to start coding from or if coding is not interesting to you anymore, Here’s my advice to you (I’m not a professional though. so, you have a total liberty to disagree with me 😊) Coding neither has a how-to-guide, nor a shortcut to be a coding sensei. Starting with coding is as simple as starting with it. It is an art. And art doesn’t come with guides. It is a process of learning through trial and error. If you’re coding, it is highly unlikely that you’ll get things right on the first attempt, YOU DON’T! Most of the people quit here saying, “I’m tired, Let me eat something”. But if you keep the process going, make errors, and learn from them to know where you went wrong, you will have a whole new appreciation for the process of coding as of how it shapes your logic and makes you think in a different light. And few years down the line you will probably sit in front of the computer just like me and write an article on how coding shaped your life, made you a better person, filled your life with creativity. Just in case you do, I’ll be so happy to read through your story someday.</p>
+<p>So unleash the art of coding as how you build things with Lego bricks. Write code, Make mistakes, understand the errors and solve them. When you were a kid, it’s highly unlikely that you build a beautiful castle in the first attempt. Similarly it’s highly unlikely that you’ll build a world class software in your first attempt. You will gradually get better with time and practice. And it’s gonna involve a lot of error solving and experimenting. And believe me, when you make something built with code, that you can call your own, You will have a whole new appreciation for the efforts that you’ve put to get there. And that‘s what LEGO CODING does to you. It makes you be proud of yourself for the castle-like structure you have built with your Lego bricks of code. So, have fun writing code, have fun exploring fun new challenges in this world full of possibilities. Have a good day 😄</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

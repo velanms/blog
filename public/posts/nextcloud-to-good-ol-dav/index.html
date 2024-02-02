@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Nextcloud to Good Ol&#39; Dav | Velan Salis.</title>
+<meta name="keywords" content="">
+<meta name="description" content="We need standards, not tools
+The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&rsquo;m not able to find the person who said it, but whatever is said, is true. It&rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&rsquo;s horizons to a new beyond.">
+<meta name="author" content="Velan Salis">
+<link rel="canonical" href="https://velanms.com/posts/nextcloud-to-good-ol-dav/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c0d4ec6336a1165c59b5a3249a625342de2c2f42e4da769c0b935a3c070b050.css" integrity="sha256-DA1OxjNqEWXFm1oySaYlNC3iwvQuTadpwLk1o8BwsFA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://velanms.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://velanms.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://velanms.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://velanms.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://velanms.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Nextcloud to Good Ol&#39; Dav" />
+<meta property="og:description" content="We need standards, not tools
+The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&rsquo;m not able to find the person who said it, but whatever is said, is true. It&rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&rsquo;s horizons to a new beyond." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://velanms.com/posts/nextcloud-to-good-ol-dav/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-01T07:22:41+05:30" />
+<meta property="article:modified_time" content="2022-05-01T07:22:41+05:30" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nextcloud to Good Ol&#39; Dav"/>
+<meta name="twitter:description" content="We need standards, not tools
+The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&rsquo;m not able to find the person who said it, but whatever is said, is true. It&rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&rsquo;s horizons to a new beyond."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://velanms.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Nextcloud to Good Ol' Dav",
+      "item": "https://velanms.com/posts/nextcloud-to-good-ol-dav/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Nextcloud to Good Ol' Dav",
+  "name": "Nextcloud to Good Ol\u0027 Dav",
+  "description": "We need standards, not tools\nThe above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I\u0026rsquo;m not able to find the person who said it, but whatever is said, is true. It\u0026rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person\u0026rsquo;s horizons to a new beyond.",
+  "keywords": [
+    
+  ],
+  "articleBody": "We need standards, not tools\nThe above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I’m not able to find the person who said it, but whatever is said, is true. It’s true because standards remove the Lock-In that is created by a tool and opens a person’s horizons to a new beyond. So today I thought I would write about a web standard that made my life quite easier and that is CalDAV / CardDAV / WebDAV.\nBut, Nextcloud? Initially, I thought that Nextcloud was a good option to have my contacts/calendars and files synced up. Nextcloud is an amazing option, but it comes with its limitations. It could viably become a good option for me if it hadn’t become a lock-in in itself.\nNextcloud provides all the above-mentioned tools. But, it is also required to run a Nextcloud instance (which sometimes becomes painstakingly difficult to figure out if something goes wrong), or pay for a cloud provider that runs a managed Nextcloud instance. Which would be expensive just for a simple backup of files, calendar and contacts.\nI started with their free tier plan with one of the cloud providers. However, the response times became inconsistent sometimes. They aren’t to blame. I was using their service for free, so they had no moral obligation to be accountable towards me. So I went in search for a better, lightweight option that could give me the same convenience with more effectiveness.\nEnter the – “DAV” My perpetual search for convenience and effectiveness led me to DAV. I knew about DAV. But I was using it under the hood of Nextcloud, which provided the DAV service as an extension. And it was a no-brainer to run these services independently for better usability and convenience. But then I thought, better late than never and jumped right into running these on top of Docker.\nI already own a self-hosted server. So all I had to do was, run the services on top of Docker and expose these endpoints to the outside world so that I can use them from my other devices. So I zero’d in onto the two Dockerhub images, they are,\nbytemark/webdav for WebDAV, which runs a small Apache server with WebDAV extension. Extremely lightweight and blazing fast. ckulka/baikal for CalDAV and CardDAV, which runs a fully managed Caldav and CardDAV server. Baikal is quite popular and has a good community to help just in case something goes wrong. And it was done. My contacts are backed up. My files are backed up. All with just two lightweight Docker images quietly doing their thing.\nClosing Thoughts The reason we need standards is that, when integrating the existing CalDAV, CardDAV and WebDAV with my phone and desktop, I didn’t have to run a new software to let them know how they need to parse the incoming data. Since it’s a standard, it is already embedded into the system and the input is expected to come in such format.\nIf the standards are widely implemented across all the tools, it’s not as hard to make it interoperable, and it also lets the person decide how they want to experience the internet without a lot of overhead. We not just live in the world where there are lesser standard implementing tools, but we live in the world where most of the code that we run in our machines are not open sourced. Therefore, there is no way to verify its integrity. And that has become a new normal.\nHopefully, there comes a time when we get to freely chat with people in Signal from Telegram (also other chat platforms) and vice versa and the lock-ins are removed completely. Hopefully, there comes a time when the person gets to decide the kind of experience they want to get from the internet. And hopefully there comes a time when I get to write about this in a happier tone. :)\nThanks for reading, have a nice day.\n",
+  "wordCount" : "680",
+  "inLanguage": "en",
+  "datePublished": "2022-05-01T07:22:41+05:30",
+  "dateModified": "2022-05-01T07:22:41+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Velan Salis"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://velanms.com/posts/nextcloud-to-good-ol-dav/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Velan Salis.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://velanms.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://velanms.com/" accesskey="h" title="Velan Salis. (Alt + H)">Velan Salis.</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://velanms.com/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/elsewhere" title="Elsewhere">
+                    <span>Elsewhere</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/uses" title="Uses">
+                    <span>Uses</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Nextcloud to Good Ol&#39; Dav
+    </h1>
+    <div class="post-meta"><span title='2022-05-01 07:22:41 +0530 IST'>May 1, 2022</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Velan Salis
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#but-nextcloud" aria-label="But, Nextcloud?">But, Nextcloud?</a></li>
+                <li>
+                    <a href="#enter-the--dav" aria-label="Enter the – “DAV”">Enter the – “DAV”</a></li>
+                <li>
+                    <a href="#closing-thoughts" aria-label="Closing Thoughts">Closing Thoughts</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>We need standards, not tools</p>
+<p>The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&rsquo;m not able to find the person who said it, but whatever is said, is true. It&rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&rsquo;s horizons to a new beyond. So today I thought I would write about a web standard that made my life quite easier and that is CalDAV / CardDAV / WebDAV.</p>
+<h2 id="but-nextcloud">But, Nextcloud?<a hidden class="anchor" aria-hidden="true" href="#but-nextcloud">#</a></h2>
+<p>Initially, I thought that Nextcloud was a good option to have my contacts/calendars and files synced up. Nextcloud is an amazing option, but it comes with its limitations. It could viably become a good option for me if it hadn&rsquo;t become a lock-in in itself.</p>
+<p>Nextcloud provides all the above-mentioned tools. But, it is also required to run a Nextcloud instance (which sometimes becomes painstakingly difficult to figure out if something goes wrong), or pay for a cloud provider that runs a managed Nextcloud instance. Which would be expensive just for a simple backup of files, calendar and contacts.</p>
+<p>I started with their free tier plan with one of the cloud providers. However, the response times became inconsistent sometimes. They aren&rsquo;t to blame. I was using their service for free, so they had no moral obligation to be accountable towards me. So I went in search for a better, lightweight option that could give me the same convenience with more effectiveness.</p>
+<h2 id="enter-the--dav">Enter the – “DAV”<a hidden class="anchor" aria-hidden="true" href="#enter-the--dav">#</a></h2>
+<p>My perpetual search for convenience and effectiveness led me to DAV. I knew about DAV. But I was using it under the hood of Nextcloud, which provided the DAV service as an extension. And it was a no-brainer to run these services independently for better usability and convenience. But then I thought, better late than never and jumped right into running these on top of Docker.</p>
+<p>I already own a self-hosted server. So all I had to do was, run the services on top of Docker and expose these endpoints to the outside world so that I can use them from my other devices. So I zero&rsquo;d in onto the two Dockerhub images, they are,</p>
+<ul>
+<li><strong>bytemark/webdav</strong> for WebDAV, which runs a small Apache server with WebDAV extension. Extremely lightweight and blazing fast.</li>
+<li><strong>ckulka/baikal</strong> for CalDAV and CardDAV, which runs a fully managed Caldav and CardDAV server. Baikal is quite popular and has a good community to help just in case something goes wrong.</li>
+</ul>
+<p>And it was done. My contacts are backed up. My files are backed up. All with just two lightweight Docker images quietly doing their thing.</p>
+<h2 id="closing-thoughts">Closing Thoughts<a hidden class="anchor" aria-hidden="true" href="#closing-thoughts">#</a></h2>
+<p>The reason we need standards is that, when integrating the existing CalDAV,  CardDAV and WebDAV with my phone and desktop, I didn&rsquo;t have to run a new software to let them know how they need to parse the incoming data. Since it&rsquo;s a standard, it is already embedded into the system and the input is expected to come in such format.</p>
+<p>If the standards are widely implemented across all the tools, it&rsquo;s not as hard to make it interoperable, and it also lets the person decide how they want to experience the internet without a lot of overhead. We not just live in the world where there are lesser standard implementing tools, but we live in the world where most of the code that we run in our machines are not open sourced. Therefore, there is no way to verify its integrity. And that has become a new normal.</p>
+<p>Hopefully, there comes a time when we get to freely chat with people in Signal from Telegram (also other chat platforms) and vice versa and the lock-ins are removed completely. Hopefully, there comes a time when the person gets to decide the kind of experience they want to get from the internet. And hopefully there comes a time when I get to write about this in a happier tone. :)</p>
+<p>Thanks for reading, have a nice day.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://velanms.com/">Velan Salis.</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><div id="extended_footer">
+© 2022 <a href="/">Velan Salis</a> Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a> <br>
+<a href="/archive">Archive</a> . <a href="/search">Search</a> . <a href="/tags">Tags</a> . <a href="/categories">Categories</a> . <a href="/posts/index.xml">Subscribe</a><br>
+This blog is licenced under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY SA 4.0</a> Unless otherwise stated<br>
+</div>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How I organize my API tests in Golang | Velan Salis.</title>
+<meta name="keywords" content="">
+<meta name="description" content="Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)">
+<meta name="author" content="Velan Salis">
+<link rel="canonical" href="https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c0d4ec6336a1165c59b5a3249a625342de2c2f42e4da769c0b935a3c070b050.css" integrity="sha256-DA1OxjNqEWXFm1oySaYlNC3iwvQuTadpwLk1o8BwsFA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://velanms.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://velanms.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://velanms.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://velanms.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://velanms.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="How I organize my API tests in Golang" />
+<meta property="og:description" content="Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-04T13:02:23+05:30" />
+<meta property="article:modified_time" content="2022-07-04T13:02:23+05:30" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I organize my API tests in Golang"/>
+<meta name="twitter:description" content="Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://velanms.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How I organize my API tests in Golang",
+      "item": "https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I organize my API tests in Golang",
+  "name": "How I organize my API tests in Golang",
+  "description": "Testing is apparently the most important part in writing API\u0026rsquo;s since there could be so many ways the API\u0026rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API\u0026rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I\u0026rsquo;m glad if it helps you to organize your tests better :)",
+  "keywords": [
+    
+  ],
+  "articleBody": "Testing is apparently the most important part in writing API’s since there could be so many ways the API’s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API’s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I’m glad if it helps you to organize your tests better :)\nContainment Structs We need some structs that could act as a handy container for the tests that we are running. This organization is good since they provide a single place to access test methods, test data and also the runtime, dynamic data that needs to be persisted across tests. This might seem a bit overwhelming, but stay with me on this :) Here we assume the testing module name is module\ntype module_test_payload struct { scenario string method func(t *testing.T) } type module_test_config struct { tests []module_test_payload } type module_tests struct { test_api map[string]module_test_config } Test Method Identifiers The below const values act as a key for the test_api map so that the data and methods can be cleanly isolated and maintained inside the test_api map in module_tests. (One Identifier for one function)\nconst ( GetSomething string = \"GetSomething\" UpdateSomething string = \"UpdateSomething\" AddSomething string = \"AddSomething\" ) init() With the below code snippet, we instantiate and populate the main struct i.e. module_tests in this case, so that it can be accessible to all the tests in the file and the data can be easily persisted across tests.\nvar ( mt module_tests ) func init() { mt = module_tests{} mt.test_api = make(map[string]module_test_config) mt.test_api[GetSomething] = module_test_config{ tests: []module_test_payload{ { scenario: \"returns valid response\", method: mt._GetSomething_returns_valid_response, }, } } st.test_api[UpdateSomething] = module_test_config{ tests: []module_test_payload{ { scenario: \"updates valid response\", method: mt._UpdateSomething_returns_valid_response, }, }, } } In this step, we make a list of scenarios and the methods that we need to execute and pair them with the key identifier that we initialized earlier. This helps immensely in readability and gives a proper idea about what tests are we going to be running. Personally, This helps me in brainstorming the scenarios before I could write tests for methods. I just write scenarios and substitute the methods with blank functions and get a hang of how I’m going to be proceeding.\nTest Method In the below code snippet, we loop over the methods we have attached with the identifier and execute them one by one. (On a sidenote, if we are testing the method GetSomething, the test for that method will always be TestGetSomething. Golang will acknowledge this and only execute functions prefixed with Test)\nfunc TestGetSomething(t *testing.T) { api := mt.test_api[GetSomething] testcases := api.tests t.Cleanup(func() { // Here we cleanup the tests. }) for _, testcase := range testcases { t.Run(testcase.scenario, func(t *testing.T) { testcase.method(t) }) } } Here we just need to write the method once and forget about it since we just need to add more methods to the tests array, and they will be executed in sequence. We can also set up a cleanup task in t.Cleanup(func(){}) so that the garbage that was created during the test can be cleaned up.\nfunc (m *module_tests)_GetSomething_returns_valid_response(t *testing.T){ // Write the testing code here. } The following code is the stub of the function that will be executed when the tests are running.\nPutting it all together Although, It was minimal explanation from my end as to what this setup does, I encourage you to clone this code and check it out yourself. To put this all together, would span a lot of unwelcoming space in this page. Hence, I have created a code snippet in my repo for you to check it out. It’s copy-pastable (new word, yay!)\nWhy this approach? Personally, I like the code to be readable and glanceable (Thanks @matryer for this word). I want to look at a piece of code and exactly understand what the code does. With this approach, we get the gist of what the code does in the init() function while we are writing the scenarios and the methods that the scenarios will use to further execute.\nThis approach also helps in grouping the API functions that produce similar outputs without being tied down to writing all the functions under a Table Driven Test. I usually write the main scenarios in the init() and then run sub-scenarios that needs to be evaluated similarly, inside the stub-method in the good ol’ table driven fashion. That greatly helps in debugging and maintenance.\nAlso, when there are a lots and lots of tests being added to the file, you will always have a link to those methods in the init() so that you can just find them all in one place. That saves me a lot of overhead, and I put that all the time in coding. It might seem a lot of prep work for just a bit of testing, but in a long run, I believe it’s worth it.\nWrap! And, That’s a wrap! Thanks for reading. I wrote this post in a hurry without a lot of brainstorming. I just wanted to put out the workflow I have deduced and which been working quite well for me. If this helped you, or if there’s a way to make my code even better and less-work-proned (for the kind of lazy bug I am), please do let me know here. Have a nice day.\n",
+  "wordCount" : "930",
+  "inLanguage": "en",
+  "datePublished": "2022-07-04T13:02:23+05:30",
+  "dateModified": "2022-07-04T13:02:23+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Velan Salis"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Velan Salis.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://velanms.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://velanms.com/" accesskey="h" title="Velan Salis. (Alt + H)">Velan Salis.</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://velanms.com/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/elsewhere" title="Elsewhere">
+                    <span>Elsewhere</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/uses" title="Uses">
+                    <span>Uses</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How I organize my API tests in Golang
+    </h1>
+    <div class="post-meta"><span title='2022-07-04 13:02:23 +0530 IST'>July 4, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Velan Salis
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#containment-structs" aria-label="Containment Structs">Containment Structs</a></li>
+                <li>
+                    <a href="#test-method-identifiers" aria-label="Test Method Identifiers">Test Method Identifiers</a></li>
+                <li>
+                    <a href="#test-method" aria-label="Test Method">Test Method</a></li>
+                <li>
+                    <a href="#putting-it-all-together" aria-label="Putting it all together">Putting it all together</a></li>
+                <li>
+                    <a href="#why-this-approach" aria-label="Why this approach?">Why this approach?</a></li>
+                <li>
+                    <a href="#wrap" aria-label="Wrap!">Wrap!</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)</p>
+<h2 id="containment-structs">Containment Structs<a hidden class="anchor" aria-hidden="true" href="#containment-structs">#</a></h2>
+<p>We need some structs that could act as a handy container for the tests that we are running. This organization is good since they provide a single place to access test methods, test data and also the runtime, dynamic data that needs to be persisted across tests. This might seem a bit overwhelming, but stay with me on this :) Here we assume the testing module name is module</p>
+<pre tabindex="0"><code>type module_test_payload struct {
+    scenario string  method func(t *testing.T)
+}
+
+type module_test_config struct {
+    tests []module_test_payload
+}
+
+type module_tests struct {
+    test_api map[string]module_test_config
+}
+</code></pre><h2 id="test-method-identifiers">Test Method Identifiers<a hidden class="anchor" aria-hidden="true" href="#test-method-identifiers">#</a></h2>
+<p>The below const values act as a key for the test_api map so that the data and methods can be cleanly isolated and maintained inside the test_api map in module_tests. (One Identifier for one function)</p>
+<pre tabindex="0"><code>const (
+    GetSomething    string = &#34;GetSomething&#34;
+    UpdateSomething string = &#34;UpdateSomething&#34;
+    AddSomething    string = &#34;AddSomething&#34;
+)
+
+init()
+</code></pre><p>With the below code snippet, we instantiate and populate the main struct i.e. module_tests in this case, so that it can be accessible to all the tests in the file and the data can be easily persisted across tests.</p>
+<pre tabindex="0"><code>var (
+    mt module_tests
+)
+
+func init() {
+    mt = module_tests{}
+    mt.test_api = make(map[string]module_test_config)
+    mt.test_api[GetSomething] = module_test_config{
+        tests: []module_test_payload{
+            {
+                scenario: &#34;returns valid response&#34;,
+                method:   mt._GetSomething_returns_valid_response,
+            },
+        }
+    }
+    st.test_api[UpdateSomething] = module_test_config{
+        tests: []module_test_payload{
+            {
+                scenario: &#34;updates valid response&#34;,
+                method:   mt._UpdateSomething_returns_valid_response,
+            },
+        },
+    }
+}
+</code></pre><p>In this step, we make a list of scenarios and the methods that we need to execute and pair them with the key identifier that we initialized earlier. This helps immensely in readability and gives a proper idea about what tests are we going to be running. Personally, This helps me in brainstorming the scenarios before I could write tests for methods. I just write scenarios and substitute the methods with blank functions and get a hang of how I&rsquo;m going to be proceeding.</p>
+<h2 id="test-method">Test Method<a hidden class="anchor" aria-hidden="true" href="#test-method">#</a></h2>
+<p>In the below code snippet, we loop over the methods we have attached with the identifier and execute them one by one.
+(On a sidenote, if we are testing the method GetSomething, the test for that method will always be TestGetSomething. Golang will acknowledge this and only execute functions prefixed with Test)</p>
+<pre tabindex="0"><code>func TestGetSomething(t *testing.T) {
+    api := mt.test_api[GetSomething]
+    testcases := api.tests
+    
+    t.Cleanup(func() {
+        // Here we cleanup the tests.
+    })
+    
+    for _, testcase := range testcases {
+        t.Run(testcase.scenario, func(t *testing.T) {
+            testcase.method(t)
+        })
+    }
+}
+</code></pre><p>Here we just need to write the method once and forget about it since we just need to add more methods to the tests array, and they will be executed in sequence. We can also set up a cleanup task in t.Cleanup(func(){}) so that the garbage that was created during the test can be cleaned up.</p>
+<pre tabindex="0"><code>func (m *module_tests)_GetSomething_returns_valid_response(t *testing.T){
+    // Write the testing code here.
+}
+</code></pre><p>The following code is the stub of the function that will be executed when the tests are running.</p>
+<h2 id="putting-it-all-together">Putting it all together<a hidden class="anchor" aria-hidden="true" href="#putting-it-all-together">#</a></h2>
+<p>Although, It was minimal explanation from my end as to what this setup does, I encourage you to clone this code and check it out yourself. To put this all together, would span a lot of unwelcoming space in this page. Hence, I have created a code snippet in my repo for you to check it out. It&rsquo;s copy-pastable (new word, yay!)</p>
+<h2 id="why-this-approach">Why this approach?<a hidden class="anchor" aria-hidden="true" href="#why-this-approach">#</a></h2>
+<p>Personally, I like the code to be readable and glanceable (Thanks <a href="https://github.com/matryer">@matryer</a> for this word). I want to look at a piece of code and exactly understand what the code does. With this approach, we get the gist of what the code does in the init() function while we are writing the scenarios and the methods that the scenarios will use to further execute.</p>
+<p>This approach also helps in grouping the API functions that produce similar outputs without being tied down to writing all the functions under a Table Driven Test. I usually write the main scenarios in the init() and then run sub-scenarios that needs to be evaluated similarly, inside the stub-method in the good ol&rsquo; table driven fashion. That greatly helps in debugging and maintenance.</p>
+<p>Also, when there are a lots and lots of tests being added to the file, you will always have a link to those methods in the init() so that you can just find them all in one place. That saves me a lot of overhead, and I put that all the time in coding. It might seem a lot of prep work for just a bit of testing, but in a long run, I believe it&rsquo;s worth it.</p>
+<h2 id="wrap">Wrap!<a hidden class="anchor" aria-hidden="true" href="#wrap">#</a></h2>
+<p>And, That&rsquo;s a wrap! Thanks for reading. I wrote this post in a hurry without a lot of brainstorming. I just wanted to put out the workflow I have deduced and which been working quite well for me. If this helped you, or if there&rsquo;s a way to make my code even better and less-work-proned (for the kind of lazy bug I am),  please do let me know here. Have a nice day.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://velanms.com/">Velan Salis.</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><div id="extended_footer">
+© 2022 <a href="/">Velan Salis</a> Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a> <br>
+<a href="/archive">Archive</a> . <a href="/search">Search</a> . <a href="/tags">Tags</a> . <a href="/categories">Categories</a> . <a href="/posts/index.xml">Subscribe</a><br>
+This blog is licenced under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY SA 4.0</a> Unless otherwise stated<br>
+</div>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
