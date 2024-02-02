@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Velan Salis.</title>
-    <link>https://velanms.github.io/blog/categories/tutorial/</link>
+    <link>http://velanms.com/categories/tutorial/</link>
     <description>Recent content in Tutorial on Velan Salis.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://velanms.github.io/blog/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://velanms.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple file upload using Koa.js (or Node.js in General)</title>
-      <link>https://velanms.github.io/blog/posts/file-upload-koa-js/</link>
+      <link>http://velanms.com/posts/file-upload-koa-js/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.github.io/blog/posts/file-upload-koa-js/</guid>
+      <guid>http://velanms.com/posts/file-upload-koa-js/</guid>
       <description>A post about how to use Koa.js to upload files</description>
       <content:encoded><![CDATA[<p>I have been using Koa.js for a while now and it turns out to be great. I’m having a lot of fun playing around with it since its simple and configurable. And I was searching for a <em>ground up</em> way to execute file uploads so that I can tweak its functionality however I want to. And it turns out, It’s not as difficult as I thought. Before going forward, I’m assuming you have a basic knowledge of how to setup basic Koa.js server with routers since it’s being covered in so many articles. So I’ll be skipping the server setup with routers. <a href="https://medium.com/@adam_bickford/creating-a-basic-site-with-koa-pt-1-f3e1711f7a9">Click here</a> if you want to go through an article that covers the same. So, Lets get coding. 😉</p>
 <h3 id="server-page--appjs">Server Page : app.js</h3>
@@ -126,9 +126,9 @@ Pipe node.js streams safely with Promises. <a href="https://www.npmjs.com/packag
     </item>
     <item>
       <title>Docker, a replacement of Virtualenv for Python developement</title>
-      <link>https://velanms.github.io/blog/posts/docker-as-virtualenv/</link>
+      <link>http://velanms.com/posts/docker-as-virtualenv/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.github.io/blog/posts/docker-as-virtualenv/</guid>
+      <guid>http://velanms.com/posts/docker-as-virtualenv/</guid>
       <description>A post about using docker to improve the workflow related to python development</description>
       <content:encoded><![CDATA[<p>Docker! Sounds fancy and simple but trust me it has revolutionized how the tech industry builds, ships and deploys the applications lately. <strong>Docker</strong> is basically a mini-operating system where you build and run your applications which is totally isolated from the native operating system in your computer, and the same container can be deployed in the hosting platforms. If you are new to docker and want to learn more about its intricacies, i highly encourage you to go through the links given in the end of this article to learn more about it. So let’s get right in :)</p>
 <h3 id="creating-a-dockerfile">Creating a Dockerfile</h3>
