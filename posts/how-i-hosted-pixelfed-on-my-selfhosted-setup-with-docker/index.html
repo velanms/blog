@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How I self-hosted Pixelfed on my tiny server with Docker | Velan Salis.</title>
+<meta name="keywords" content="">
+<meta name="description" content="Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.
+The best thing about Pixelfed is that, it&rsquo;s open source, and it&rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse.">
+<meta name="author" content="Velan Salis">
+<link rel="canonical" href="https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c0d4ec6336a1165c59b5a3249a625342de2c2f42e4da769c0b935a3c070b050.css" integrity="sha256-DA1OxjNqEWXFm1oySaYlNC3iwvQuTadpwLk1o8BwsFA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://velanms.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://velanms.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://velanms.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://velanms.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://velanms.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="How I self-hosted Pixelfed on my tiny server with Docker" />
+<meta property="og:description" content="Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.
+The best thing about Pixelfed is that, it&rsquo;s open source, and it&rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-07T05:10:48+05:30" />
+<meta property="article:modified_time" content="2022-08-07T05:10:48+05:30" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I self-hosted Pixelfed on my tiny server with Docker"/>
+<meta name="twitter:description" content="Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.
+The best thing about Pixelfed is that, it&rsquo;s open source, and it&rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://velanms.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How I self-hosted Pixelfed on my tiny server with Docker",
+      "item": "https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I self-hosted Pixelfed on my tiny server with Docker",
+  "name": "How I self-hosted Pixelfed on my tiny server with Docker",
+  "description": "Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the \u0026ldquo;Grow at all costs\u0026rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.\nThe best thing about Pixelfed is that, it\u0026rsquo;s open source, and it\u0026rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the “Grow at all costs” corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.\nThe best thing about Pixelfed is that, it’s open source, and it’s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse. Isn’t that cool? I recently spun up a Pixelfed instance on my server, and this is an explanatory post about the steps required to host an instance for yourself on your server. Let’s dive in, shall we?\nBefore we could dive in… Note: The instructions mentioned in this post concerns with Pixelfed version 0.11.3 with additional commits upto 352500f . I can’t guarentee the instructions will ever work for the uncoming releases. Feel free to get in touch with me at Mastodon or Email if necessary.\nEnvironment Setup Assuming that you have installed docker and docker-compose on your server, the next thing to note is to set up an .env file for docker-compose of Pixelfed. My .env file for my self-hosted instance is as follows\nAPP_NAME=\"Pixelfed\" APP_ENV=production APP_KEY= APP_DEBUG=false APP_URL=https://pixelfed.lhin.space APP_DOMAIN=\"pixelfed.lhin.space\" ADMIN_DOMAIN=\"pixelfed.lhin.space\" SESSION_DOMAIN=\"pixelfed.lhin.space\" TRUST_PROXIES=\"*\" LOG_CHANNEL=stack DB_CONNECTION=mysql DB_HOST=mariadb DB_PORT=3306 DB_DATABASE=somedatabase # Change this DB_USERNAME=someusername # Change this DB_PASSWORD=somepassword # Change this PUID=1000 PGID=1000 MYSQL_DATABASE=somedatabase # Change this MYSQL_USER=someusername # Change this MYSQL_PASSWORD=somepassword\t# Change this MYSQL_ROOT_PASSWORD=somepassword\t# Change this BROADCAST_DRIVER=redis CACHE_DRIVER=redis SESSION_DRIVER=redis QUEUE_DRIVER=redis REDIS_SCHEME=tcp REDIS_HOST=redis REDIS_PASSWORD=null REDIS_PORT=6379 # For this setup, you could add any email config as your email provider. MAIL_DRIVER=smtp MAIL_HOST=smtp.mail.host MAIL_PORT=587 MAIL_USERNAME=mailbox@server.name MAIL_PASSWORD=somepassword MAIL_ENCRYPTION=tls MAIL_FROM_ADDRESS=mailbox@server.name MAIL_FROM_NAME=Pixelfed OPEN_REGISTRATION=false ENFORCE_EMAIL_VERIFICATION=true PF_MAX_USERS=1000 MAX_PHOTO_SIZE=15000 MAX_CAPTION_LENGTH=150 MAX_ALBUM_LENGTH=4 ACTIVITY_PUB=true AP_REMOTE_FOLLOW=true AP_SHAREDINBOX=true AP_INBOX=true AP_OUTBOX=true ATOM_FEEDS=true NODEINFO=true WEBFINGER=true HORIZON_DARKMODE=true HORIZON_EMBED=true INSTANCE_CONTACT_EMAIL=admin@server.name OAUTH_ENABLED=true ENABLE_CONFIG_CACHE=false .env.pixelfed\nCreate a file .env.pixelfed in your server directory. Copy the contents from the above to the .env.pixelfed file. Make sure to replace the values mentioned under *change this *with the respective values that the database and mail server complies with. Once this .env file is all set and done, we move on to docker-compose setup.\nDocker Setup The following is my docker-compose.yml file. I’m using the zknt/pixelfed image from the Dockerhub, since it’s the most downloaded and actively maintained image of Pixelfed, yet.\nversion: '3' networks: internal: internal: true web: driver: bridge external: true volumes: pixelfed_redis: external: true pixelfed_mariadb: external: true pixelfed_storage: external: true pixelfed_bootstrap: external: true services: app: container_name: pixelfed-app image: zknt/pixelfed:2022-08-06 restart: unless-stopped env_file: - .env.pixelfed volumes: - pixelfed_storage:/var/www/storage - pixelfed_bootstrap:/var/www/bootstrap - ./.env.pixelfed:/var/www/.env networks: - web - internal depends_on: - mariadb - redis labels: - traefik.enable=true - traefik.http.routers.pixelfed.rule=Host(`pixelfed.lhin.space`) - traefik.http.routers.pixelfed.tls=true - traefik.http.routers.pixelfed.service=pixelfed - traefik.http.routers.pixelfed.tls.certresolver=lets-encrypt - traefik.http.services.pixelfed.loadbalancer.server.port=80 worker: container_name: pixelfed-worker image: zknt/pixelfed:2022-08-04 restart: unless-stopped env_file: - .env.pixelfed volumes: - pixelfed_storage:/var/www/storage - pixelfed_bootstrap:/var/www/bootstrap - ./.env.pixelfed:/var/www/.env networks: - web - internal depends_on: - mariadb - redis entrypoint: /worker-entrypoint.sh healthcheck: test: php artisan horizon:status | grep running interval: 60s timeout: 5s retries: 1 mariadb: image: ghcr.io/linuxserver/mariadb:alpine-version-10.5.9-r0 container_name: pixelfed-mariadb restart: always networks: - internal env_file: - .env.pixelfed volumes: - pixelfed_mariadb:/config:rw redis: image: redis:5-alpine container_name: pixelfed-redis restart: unless-stopped env_file: - .env.pixelfed volumes: - pixelfed_redis:/data networks: - internal docker-compose.yml Copy the following contents to a docker-compose.yml file and keep it in the same directory as the .env.pixelfed file. Change the contents as it pleases you. This is all you need to set up a Pixelfed instance on your server.\nNote: Since I’m using traefik to manage my docker images, I tend to have a web network that binds with the traefik docker image. You could use other reverse proxies by removing the labels in the app service and by adding ports: - 80:8080. In this you are redirecting the traffic coming to port 8080 to the docker port 80. More info here\nPre-requisites In order to run Pixelfed, we need to create external docker volumes first. You could also use bind mounts to local directory. But I tend to use volumes so that I don’t have to fiddle around with permission issues. The following commands will create four volumes.\ndocker volume create pixelfed_bootstrap docker volume create pixelfed_storage docker volume create pixelfed_mariadb docker volume create pixelfed_redis create-volume.sh\nVoilà! Now for the climax, you need to run docker-compose up -d (?)\nWell, not so fast. You need to do so in steps so that the MariaDB and the Redis is set up properly.\nFirst, you need to run docker-compose up -d mariadb redis. This will set up the MariaDB and Redis instance. You could also do docker-compose logs -f to check the logs and see what’s cooking in there. Once that’s done, you should run docker-compose up -d app. This will spin up the app instance and run all the database migrations that are required. Next, You need to run docker-compose up -d worker. This will spin up the worker instance which will be responsible for Remote fetching account avatars and other ActivityPub stuff. Once this is done, you could check the logs using docker-compose logs -f to see if there are any errors in the installation. If not, we move on to the next step.\nServer Setup Firstly, you need to create an app key. Run docker-compose exec app php artisan key:generate to generate an app key. This key will be added to your .env.pixelfed file in base64 format.\nNow that the instance is set up properly, we need to create an admin user. You could do so by running docker-compose exec app php artisan user:create. Then answer the prompts given on the screen, and you are done.\nTroubleshooting Empty user profiles: For a brief moment, I had an issue of getting an empty user profile when remote account is being fetched. It was fixed by running docker-compose exec app php artisan passport:install on my server as mentioned in this issue. Closing Thoughts I’m very optimistic about a future where decentralized social media like, Pixelfed, Mastodon and the entirety of Fediverse is a thing. I hope to see this pick up steam among the netizens, and also hope to see the service itself becomes accessible to anyone and everyone. For that to happen, this is my small contribution to anyone who wants to spin up a server for themselves. Feel free to contact me for any assistance.\nHave a nice day :)\n",
+  "wordCount" : "1046",
+  "inLanguage": "en",
+  "datePublished": "2022-08-07T05:10:48+05:30",
+  "dateModified": "2022-08-07T05:10:48+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Velan Salis"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Velan Salis.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://velanms.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://velanms.com/" accesskey="h" title="Velan Salis. (Alt + H)">Velan Salis.</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://velanms.com/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/elsewhere" title="Elsewhere">
+                    <span>Elsewhere</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://velanms.com/uses" title="Uses">
+                    <span>Uses</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How I self-hosted Pixelfed on my tiny server with Docker
+    </h1>
+    <div class="post-meta"><span title='2022-08-07 05:10:48 +0530 +0530'>August 7, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Velan Salis
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#before-we-could-dive-in" aria-label="Before we could dive in&hellip;">Before we could dive in&hellip;</a></li>
+                <li>
+                    <a href="#environment-setup" aria-label="Environment Setup">Environment Setup</a></li>
+                <li>
+                    <a href="#docker-setup" aria-label="Docker Setup">Docker Setup</a></li>
+                <li>
+                    <a href="#pre-requisites" aria-label="Pre-requisites">Pre-requisites</a></li>
+                <li>
+                    <a href="#voil%c3%a0" aria-label="Voilà!">Voilà!</a></li>
+                <li>
+                    <a href="#server-setup" aria-label="Server Setup">Server Setup</a></li>
+                <li>
+                    <a href="#troubleshooting" aria-label="Troubleshooting">Troubleshooting</a></li>
+                <li>
+                    <a href="#closing-thoughts" aria-label="Closing Thoughts">Closing Thoughts</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.</p>
+<p>The best thing about Pixelfed is that, it&rsquo;s <a href="https://github.com/pixelfed/">open source</a>, and it&rsquo;s <a href="https://github.com/pixelfed/pixelfed/blob/dev/docker-compose.yml">self-hostable</a>. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the <a href="https://www.youtube.com/watch?v=S57uhCQBEk0">Fediverse</a>. Isn&rsquo;t that cool? I recently spun up a <a href="https://pixelfed.lhin.space">Pixelfed instance on my server,</a> and this is an explanatory post about the steps required to host an instance for yourself on your server. Let&rsquo;s dive in, shall we?</p>
+<h2 id="before-we-could-dive-in">Before we could dive in&hellip;<a hidden class="anchor" aria-hidden="true" href="#before-we-could-dive-in">#</a></h2>
+<blockquote>
+<p><strong>Note:</strong> The instructions mentioned in this post concerns with Pixelfed version <a href="https://github.com/pixelfed/pixelfed/releases/tag/v0.11.3">0.11.3</a> with additional commits upto <a href="https://github.com/pixelfed/pixelfed/commit/352500fdcee0188cc3ab239939182b43cd194ab9">352500f</a> . I can&rsquo;t guarentee the instructions will ever work for the uncoming releases. Feel free to get in touch with me at <a href="https://mastodon.lhin.space/@0xvms">Mastodon</a> or <a href="mailto:hi@0xvms.com">Email</a> if necessary.</p>
+</blockquote>
+<h2 id="environment-setup">Environment Setup<a hidden class="anchor" aria-hidden="true" href="#environment-setup">#</a></h2>
+<p>Assuming that you have installed <a href="https://docs.docker.com/engine/install/">docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose</a> on your server, the next thing to note is to set up an <a href="https://github.com/pixelfed/pixelfed/blob/dev/.env.docker">.env</a> file for docker-compose of Pixelfed. My .env file for my self-hosted instance is as follows</p>
+<pre tabindex="0"><code>    APP_NAME=&#34;Pixelfed&#34;
+    APP_ENV=production
+    APP_KEY=
+    APP_DEBUG=false
+    APP_URL=https://pixelfed.lhin.space
+    
+    APP_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    ADMIN_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    SESSION_DOMAIN=&#34;pixelfed.lhin.space&#34;
+    TRUST_PROXIES=&#34;*&#34;
+    
+    LOG_CHANNEL=stack
+    
+    DB_CONNECTION=mysql
+    DB_HOST=mariadb
+    DB_PORT=3306
+    DB_DATABASE=somedatabase # Change this
+    DB_USERNAME=someusername # Change this
+    DB_PASSWORD=somepassword # Change this
+    
+    PUID=1000
+    PGID=1000
+    MYSQL_DATABASE=somedatabase 		# Change this
+    MYSQL_USER=someusername 			# Change this
+    MYSQL_PASSWORD=somepassword			# Change this
+    MYSQL_ROOT_PASSWORD=somepassword	# Change this
+    
+    BROADCAST_DRIVER=redis
+    CACHE_DRIVER=redis
+    SESSION_DRIVER=redis
+    QUEUE_DRIVER=redis
+    
+    REDIS_SCHEME=tcp
+    REDIS_HOST=redis
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
+    
+    # For this setup, you could add any email config as your email provider.
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.mail.host
+    MAIL_PORT=587
+    MAIL_USERNAME=mailbox@server.name
+    MAIL_PASSWORD=somepassword
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS=mailbox@server.name
+    MAIL_FROM_NAME=Pixelfed
+    
+    OPEN_REGISTRATION=false
+    ENFORCE_EMAIL_VERIFICATION=true
+    PF_MAX_USERS=1000
+    
+    MAX_PHOTO_SIZE=15000
+    MAX_CAPTION_LENGTH=150
+    MAX_ALBUM_LENGTH=4
+    
+    ACTIVITY_PUB=true
+    AP_REMOTE_FOLLOW=true
+    AP_SHAREDINBOX=true
+    AP_INBOX=true
+    AP_OUTBOX=true
+    ATOM_FEEDS=true
+    NODEINFO=true
+    WEBFINGER=true
+    
+    HORIZON_DARKMODE=true
+    HORIZON_EMBED=true
+    INSTANCE_CONTACT_EMAIL=admin@server.name
+    OAUTH_ENABLED=true
+    ENABLE_CONFIG_CACHE=false
+</code></pre><p>.env.pixelfed</p>
+<ul>
+<li>Create a file <code>.env.pixelfed</code> in your server directory.</li>
+<li>Copy the contents from the above to the <code>.env.pixelfed</code> file.</li>
+</ul>
+<p>Make sure to replace the values mentioned under *change this *with the respective values that the database and mail server complies with. Once this .env file is all set and done, we move on to docker-compose setup.</p>
+<h2 id="docker-setup">Docker Setup<a hidden class="anchor" aria-hidden="true" href="#docker-setup">#</a></h2>
+<p>The following is my docker-compose.yml file. I&rsquo;m using the <a href="https://hub.docker.com/r/zknt/pixelfed">zknt/pixelfed</a> image from the Dockerhub, since it&rsquo;s the most downloaded and actively maintained image of Pixelfed, yet.</p>
+<pre tabindex="0"><code>    version: &#39;3&#39;
+    
+    networks:
+      internal:
+        internal: true
+      web:
+        driver: bridge
+        external: true
+    
+    volumes:
+      pixelfed_redis:
+        external: true
+      pixelfed_mariadb:
+        external: true
+      pixelfed_storage:
+        external: true
+      pixelfed_bootstrap:
+        external: true
+    
+    services:
+      app:
+        container_name: pixelfed-app
+        image: zknt/pixelfed:2022-08-06
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_storage:/var/www/storage
+          - pixelfed_bootstrap:/var/www/bootstrap
+          - ./.env.pixelfed:/var/www/.env
+        networks:
+          - web
+          - internal
+        depends_on:
+          - mariadb
+          - redis
+        labels:
+          - traefik.enable=true
+          - traefik.http.routers.pixelfed.rule=Host(`pixelfed.lhin.space`)
+          - traefik.http.routers.pixelfed.tls=true
+          - traefik.http.routers.pixelfed.service=pixelfed
+          - traefik.http.routers.pixelfed.tls.certresolver=lets-encrypt
+          - traefik.http.services.pixelfed.loadbalancer.server.port=80
+    
+      worker:
+        container_name: pixelfed-worker
+        image: zknt/pixelfed:2022-08-04
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_storage:/var/www/storage
+          - pixelfed_bootstrap:/var/www/bootstrap
+          - ./.env.pixelfed:/var/www/.env
+        networks:
+          - web
+          - internal
+        depends_on:
+          - mariadb
+          - redis
+        entrypoint: /worker-entrypoint.sh
+        healthcheck:
+          test: php artisan horizon:status | grep running
+          interval: 60s
+          timeout: 5s
+          retries: 1
+    
+      mariadb:
+        image: ghcr.io/linuxserver/mariadb:alpine-version-10.5.9-r0
+        container_name: pixelfed-mariadb
+        restart: always
+        networks:
+          - internal
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_mariadb:/config:rw
+    
+      redis:
+        image: redis:5-alpine
+        container_name: pixelfed-redis
+        restart: unless-stopped
+        env_file:
+          - .env.pixelfed
+        volumes:
+          - pixelfed_redis:/data
+        networks:
+          - internal
+</code></pre><p>docker-compose.yml
+Copy the following contents to a <code>docker-compose.yml</code> file and keep it in the same directory as the <code>.env.pixelfed</code> file. Change the contents as it pleases you. This is all you need to set up a Pixelfed instance on your server.</p>
+<blockquote>
+<p><strong>Note:</strong> Since I&rsquo;m using traefik to manage my docker images, I tend to have a <code>web</code> network that binds with the traefik docker image. You could use other reverse proxies by removing the <code>labels</code> in the <code>app</code> service and by adding <code>ports: - 80:8080</code>. In this you are redirecting the traffic coming to port 8080 to the docker port 80. <a href="https://docs.docker.com/compose/networking/">More info here</a></p>
+</blockquote>
+<h2 id="pre-requisites">Pre-requisites<a hidden class="anchor" aria-hidden="true" href="#pre-requisites">#</a></h2>
+<p>In order to run Pixelfed, we need to create external docker volumes first. You could also use <a href="https://docs.docker.com/storage/bind-mounts/">bind mounts</a> to local directory. But I tend to use volumes so that I don&rsquo;t have to fiddle around with permission issues. The following commands will create four volumes.</p>
+<pre><code>docker volume create pixelfed_bootstrap
+docker volume create pixelfed_storage
+docker volume create pixelfed_mariadb
+docker volume create pixelfed_redis
+</code></pre>
+<p>create-volume.sh</p>
+<h2 id="voilà">Voilà!<a hidden class="anchor" aria-hidden="true" href="#voilà">#</a></h2>
+<p>Now for the climax, you need to run <code>docker-compose up -d</code> (?)</p>
+<p>Well, not so fast. You need to do so in steps so that the MariaDB and the Redis is set up properly.</p>
+<ul>
+<li>First, you need to run <code>docker-compose up -d mariadb redis</code>. This will set up the MariaDB and Redis instance. You could also do <code>docker-compose logs -f</code> to check the logs and see what&rsquo;s cooking in there.</li>
+<li>Once that&rsquo;s done, you should run <code>docker-compose up -d app</code>. This will  spin up the app instance and run all the database migrations that are required.</li>
+<li>Next, You need to run <code>docker-compose up -d worker</code>. This will spin up the <code>worker</code> instance which will be responsible for Remote fetching account avatars and other ActivityPub stuff.</li>
+</ul>
+<p>Once this is done, you could check the logs using <code>docker-compose logs -f</code> to see if there are any errors in the installation. If not, we move on to the next step.</p>
+<h2 id="server-setup">Server Setup<a hidden class="anchor" aria-hidden="true" href="#server-setup">#</a></h2>
+<p>Firstly, you need to create an app key. Run <code>docker-compose exec app php artisan key:generate</code> to generate an app key. This key will be added to your <code>.env.pixelfed</code> file in <code>base64</code> format.</p>
+<p>Now that the instance is set up properly, we need to create an admin user. You could do so by running <code>docker-compose exec app php artisan user:create</code>. Then answer the prompts given on the screen, and you are done.</p>
+<h2 id="troubleshooting">Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#troubleshooting">#</a></h2>
+<ul>
+<li><strong>Empty user profiles:</strong> For a brief moment, I had an issue of getting an empty user profile when remote account is being fetched. It was fixed by running <code>docker-compose exec app php artisan passport:install</code> on my server as mentioned in <a href="https://github.com/pixelfed/pixelfed/issues/3549">this issue</a>.</li>
+</ul>
+<h2 id="closing-thoughts">Closing Thoughts<a hidden class="anchor" aria-hidden="true" href="#closing-thoughts">#</a></h2>
+<p>I&rsquo;m very optimistic about a future where decentralized social media like, Pixelfed, Mastodon and the entirety of Fediverse is a thing. I hope to see this pick up steam among the netizens, and also hope to see the service itself becomes accessible to anyone and everyone. For that to happen, this is my small contribution to anyone who wants to spin up a server for themselves. Feel free to <a href="mailto:hi@0xvms.com">contact me</a> for any assistance.</p>
+<p>Have a nice day :)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://velanms.com/">Velan Salis.</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><div id="extended_footer">
+© 2022 <a href="/">Velan Salis</a> Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a> <br>
+<a href="/archive">Archive</a> . <a href="/search">Search</a> . <a href="/tags">Tags</a> . <a href="/categories">Categories</a> . <a href="/posts/index.xml">Subscribe</a><br>
+This blog is licenced under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY SA 4.0</a> Unless otherwise stated<br>
+</div>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

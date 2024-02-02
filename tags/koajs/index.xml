@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>koajs on Velan Salis.</title>
+    <link>https://velanms.com/tags/koajs/</link>
+    <description>Recent content in koajs on Velan Salis.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://velanms.com/tags/koajs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple file upload using Koa.js (or Node.js in General)</title>
+      <link>https://velanms.com/posts/file-upload-koa-js/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/posts/file-upload-koa-js/</guid>
+      <description>A post about how to use Koa.js to upload files</description>
+      <content:encoded><![CDATA[<p>I have been using Koa.js for a while now and it turns out to be great. I’m having a lot of fun playing around with it since its simple and configurable. And I was searching for a <em>ground up</em> way to execute file uploads so that I can tweak its functionality however I want to. And it turns out, It’s not as difficult as I thought. Before going forward, I’m assuming you have a basic knowledge of how to setup basic Koa.js server with routers since it’s being covered in so many articles. So I’ll be skipping the server setup with routers. <a href="https://medium.com/@adam_bickford/creating-a-basic-site-with-koa-pt-1-f3e1711f7a9">Click here</a> if you want to go through an article that covers the same. So, Lets get coding. 😉</p>
+<h3 id="server-page--appjs">Server Page : app.js</h3>
+<pre tabindex="0"><code>// app.js
+const Koa = require(&#34;koa&#34;);
+const koaBody = require(&#34;koa-body&#34;);
+const logger = require(&#34;koa-logger&#34;);
+
+const router = require(&#34;./router&#34;);
+
+const app = new Koa();
+
+app.use(koaBody(
+    { multipart: true }
+));
+
+app.use(logger());
+
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(3000, () =&gt; {
+    console.log(&#34;Listening at 3000&#34;);
+});
+</code></pre><p>The above app.js file starts up the server and starts listening in port 3000 for requests. Simple stuff, nothing fancy. But things to be noted are the koa-body module and <code>{ multipart : true }</code> option. This part is really important, since koa-body parses the request body and populates Koa <code>ctx</code> object based on the form data being sent. When a file is being sent from the front-end, koa-body parses the request and the uploaded file attributes will be available under <code>ctx.request.files</code> which we can then access across Koa server to implement file upload functionality</p>
+<h3 id="router-and-upload-logic--routerjs">Router and Upload Logic : Router.js</h3>
+<p><em>Well, Its not a good practice to add the server logic under router.js file since router is only used for routing the requests. You will have a controller file to take care of the logic when the request is being routed from router. But for the course of this tutorial, I have written the logic in the router itself.</em></p>
+<p>In this part, you will need a package called promisepipe which I’ll explain in a second. For now, install the package by running the following command. And create a folder named uploads in the root of the project which will hold uploaded images.</p>
+<pre tabindex="0"><code>npm install promisepipe
+</code></pre><pre tabindex="0"><code>// router.js
+const Koa = require(&#34;koa&#34;);
+const Router = require(&#34;koa-router&#34;);
+const promisePipe = require(&#34;promisepipe&#34;);
+const fs = require(&#34;fs&#34;);
+const path = require(&#34;path&#34;);
+
+const router = new Router();
+
+router.get(&#34;/&#34;, (context, next) =&gt; {
+    context.body = &#34;Hey&#34;;
+});
+
+router.post(&#34;/upload&#34;, async (context, next) {
+    try {
+        const uploadfile = context.request.files.file;
+        const savefile = `${Date.now()}#${uploadfile.name}`;
+        const readStream = fs.createReadStream(uploadfile.path);
+        const writeStream = fs.createWriteStream(path.join(&#34;uploads&#34;, savefile));
+        await promisePipe(
+            readStream.on(&#34;error&#34;, () =&gt; {
+                throw new Error({
+                    errors: &#34;File Read Error&#34;
+                });
+            }),
+            writeStream.on(&#34;error&#34;, () =&gt; {
+                throw new Error({
+                    errors: &#34;Write Error&#34;
+                });
+            })
+        );
+        context.body = {
+            message: &#34;File Uploaded&#34;
+        };
+    } catch (err) {
+        console.log(err);
+        context.body = {
+            message: &#34;There was an error&#34;,
+            errors: err
+        };
+    }
+});
+
+module.exports = router;
+</code></pre><h3 id="the-upload-logic">The Upload Logic</h3>
+<p>Anything that is written in the bold letters in router.js is important and I’ll be explaining the mode of execution one by one.</p>
+<ul>
+<li>
+<p><strong>/upload :</strong> This is the POST route handler that contains the logic of what needs to be done when the front-end makes an upload request with a file attached to its body. When the URL is hit, the function gets executed.</p>
+</li>
+<li>
+<p><strong>uploadfile</strong> : File attributes from parsed context.request.files.file in uploadfile stored in this variable so that its easier to access it later on in the code. In simple words, uploadfile contains the reference to the file to be uploaded to the server.</p>
+</li>
+<li>
+<p><strong>savefile</strong> : The file name to be stored in the folder has to be unique since the same name will be stored in the database to trace down the files from the folder later. So we use <code>{Date.now()}#${uploadfile.name</code>to create unique name <em>(where <em>uploadfile.name</em> is the name of the file to be uploaded)</em>. Which will give us a string of 1560234246152#anyfile.txt for example. Since we add the timstamp, filename stays unique and it will be stored in savefile variable.</p>
+</li>
+<li>
+<p><strong>readStream/writestream</strong> : Stream is nothing but a flow of bits from one end to another end. In here, we create a read stream from user’s local computer and write stream to server’s uploads directory. We pass uploadfile.path which contains user’s local file’s path and uploads folder to write stream. That sets up the stream needed for the upload.</p>
+</li>
+<li>
+<p><strong>promisePipe</strong> : promisePipe is a package that takes in two streams ( read / write ) and starts reading from read file to the write file. In here, bits from the user’s local computer file will be written in streams to the uploads directory on the server with the name mentioned in the variable savefile . The best thing about promisepipe is it returns a promise. It returns a resolved response when the uploading is done or returns the rejected response when there is an error. So we can await untill the uploading is done and continue executing code thereafter, or we can use try/catch block to catch any errors while uploading and handle it.</p>
+</li>
+</ul>
+<p>By the end of execution, file will be saved in uploads folder and its name will be stored in savefile variable which can be added to the database for tracking down the files when they are requested. And if there is an error while reading or writing, it will be caught by the catch block and valid response to the front-end will be sent.</p>
+<h3 id="summing-it-all-up">Summing it all up</h3>
+<p>Koa.js is an amazing lightweight configurable framework for Node.js. And arguably, There could be tons of better ways to achieve the same results but this turned out to be the best one for me where i can configure the functionality from the ground up. So if you know of any way to make this code better with added functionalities, I’d look forward to hear it from you. Happy coding. Have a nice day 😄</p>
+<h3 id="important-links">Important Links</h3>
+<ul>
+<li>
+<p><strong>Koa.js</strong> :
+Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more. <a href="https://koajs.com/">https://koajs.com/</a></p>
+</li>
+<li>
+<p><strong>koa-body</strong> :
+A Koa body parser middleware. Supports multipart, urlencoded and JSON request bodies. <a href="https://www.npmjs.com/package/koa-body">https://www.npmjs.com/package/koa-body</a></p>
+</li>
+<li>
+<p><strong>promisepipe</strong> :
+Pipe node.js streams safely with Promises. <a href="https://www.npmjs.com/package/promisepipe">https://www.npmjs.com/package/promisepipe</a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

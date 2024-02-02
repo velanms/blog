@@ -1,3 +1,3 @@
-# velanms.com
+# pages
 
-The files and directories related to my personal hugo blog.
+Repository for codeberg pages

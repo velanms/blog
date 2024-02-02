@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Velan Salis.</title>
+    <link>https://velanms.com/categories/</link>
+    <description>Recent content in Categories on Velan Salis.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Mar 2022 10:20:47 +0530</lastBuildDate>
+    <atom:link href="https://velanms.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self Introspection</title>
+      <link>https://velanms.com/categories/self-introspection/</link>
+      <pubDate>Mon, 21 Mar 2022 10:20:47 +0530</pubDate>
+      <guid>https://velanms.com/categories/self-introspection/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>Thoughts</title>
+      <link>https://velanms.com/categories/thoughts/</link>
+      <pubDate>Sun, 20 Feb 2022 09:52:36 +0530</pubDate>
+      <guid>https://velanms.com/categories/thoughts/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>Opinions</title>
+      <link>https://velanms.com/categories/opinions/</link>
+      <pubDate>Fri, 04 Feb 2022 11:43:56 +0530</pubDate>
+      <guid>https://velanms.com/categories/opinions/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>Monthly Review</title>
+      <link>https://velanms.com/categories/monthly-review/</link>
+      <pubDate>Mon, 31 Jan 2022 08:57:21 +0530</pubDate>
+      <guid>https://velanms.com/categories/monthly-review/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://velanms.com/categories/tutorial/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/categories/tutorial/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://velanms.com/categories/technology/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://velanms.com/categories/technology/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+  </channel>
+</rss>
