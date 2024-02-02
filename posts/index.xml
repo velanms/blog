@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Velan Salis.</title>
-    <link>https://velanms.com/posts/</link>
+    <link>https://velanms.github.io/blog/posts/</link>
     <description>Recent content in Posts on Velan Salis.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Jun 2023 06:18:26 +0530</lastBuildDate>
-    <atom:link href="https://velanms.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://velanms.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decluttering my online self</title>
-      <link>https://velanms.com/posts/decluttering-my-online-self/</link>
+      <link>https://velanms.github.io/blog/posts/decluttering-my-online-self/</link>
       <pubDate>Fri, 09 Jun 2023 06:18:26 +0530</pubDate>
-      <guid>https://velanms.com/posts/decluttering-my-online-self/</guid>
+      <guid>https://velanms.github.io/blog/posts/decluttering-my-online-self/</guid>
       <description>Lately I&amp;rsquo;ve been noticing that my online presence has been all over the place. I usually keep my online presence organized by using a password manager and making sure I make a note of the online services that I&amp;rsquo;m a part of. Despite all that, I&amp;rsquo;ve been greeted with a lot of unsolicited emails, which—in all honesty, I&amp;rsquo;m tired of at this point.
 So I&amp;rsquo;ve decided that I would declutter my online presence and organize my online self.</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="https://images.unsplash.com/photo-1530303263041-b5ca33678f04?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="alt text"  title="title"  />
@@ -24,9 +24,9 @@ So I&amp;rsquo;ve decided that I would declutter my online presence and organize
     </item>
     <item>
       <title>Moving to Fastmail -- again!</title>
-      <link>https://velanms.com/posts/moving-to-fastmail-again/</link>
+      <link>https://velanms.github.io/blog/posts/moving-to-fastmail-again/</link>
       <pubDate>Mon, 29 May 2023 02:35:40 +0530</pubDate>
-      <guid>https://velanms.com/posts/moving-to-fastmail-again/</guid>
+      <guid>https://velanms.github.io/blog/posts/moving-to-fastmail-again/</guid>
       <description>For some reason that I don&amp;rsquo;t remember, I had ditched Fastmail for a self-hosted email setup. Which, then I realized, was a bad idea since self-hosting email is too anxiety inducing; at least if you don&amp;rsquo;t know what you&amp;rsquo;re doing. In my case, it was since I had no clue how the parts moved inside the self-hosted mail service. I just did it for the fun of it and maybe to learn a thing or two in the process.</description>
       <content:encoded><![CDATA[<p>For some reason that I don&rsquo;t remember, I had ditched Fastmail for a self-hosted email setup. Which, then I realized, was a bad idea since self-hosting email is too anxiety inducing; at least if you don&rsquo;t know what you&rsquo;re doing. In my case, it was since I had no clue how the parts moved inside the self-hosted mail service. I just did it for the fun of it and maybe to learn a thing or two in the process.</p>
 <h2 id="enter-mailboxorghttpsmailboxorg">Enter: <a href="https://mailbox.org/">Mailbox.org</a></h2>
@@ -39,9 +39,9 @@ So I&amp;rsquo;ve decided that I would declutter my online presence and organize
     </item>
     <item>
       <title>I&#39;m back—after a long break!</title>
-      <link>https://velanms.com/posts/im-back-after-a-long-break/</link>
+      <link>https://velanms.github.io/blog/posts/im-back-after-a-long-break/</link>
       <pubDate>Mon, 22 May 2023 11:28:45 +0530</pubDate>
-      <guid>https://velanms.com/posts/im-back-after-a-long-break/</guid>
+      <guid>https://velanms.github.io/blog/posts/im-back-after-a-long-break/</guid>
       <description>Yes! I&amp;rsquo;m back blogging after a long break. Why did I leave? Not sure why, but I needed some time off from the shenanigans of the web and needed to spend some time offline with books, people and generally in the REAL WORLD.
 However, I did really miss blogging. Writing on my blog and sharing it with the world is an incentive for me to try out new things and get ahead of some crazy techie things that are happening on the internet.</description>
       <content:encoded><![CDATA[<p>Yes! I&rsquo;m back blogging after a long break. Why did I leave? Not sure why, but I needed some time off from the shenanigans of the web and needed to spend some time offline with books, people and generally in the <em>REAL WORLD</em>.</p>
@@ -55,9 +55,9 @@ However, I did really miss blogging. Writing on my blog and sharing it with the 
     </item>
     <item>
       <title>How I self-hosted Pixelfed on my tiny server with Docker</title>
-      <link>https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</link>
+      <link>https://velanms.github.io/blog/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</link>
       <pubDate>Sun, 07 Aug 2022 05:10:48 +0530</pubDate>
-      <guid>https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</guid>
+      <guid>https://velanms.github.io/blog/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/</guid>
       <description>Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &amp;ldquo;Grow at all costs&amp;rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.
 The best thing about Pixelfed is that, it&amp;rsquo;s open source, and it&amp;rsquo;s self-hostable. If you have some spare space on your servers, you could spin up a Pixelfed server and interact with the rest of the Fediverse.</description>
       <content:encoded><![CDATA[<p>Pixelfed! An ethical alternative to Instagram. Ethical because this decentralized network is run by enthusiastic users as moderators instead of the &ldquo;Grow at all costs&rdquo; corporation, which will be compelled to use your data against your own goodwill if that churns enough profits for them.</p>
@@ -269,9 +269,9 @@ docker volume create pixelfed_redis
     </item>
     <item>
       <title>How I organize my API tests in Golang</title>
-      <link>https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/</link>
+      <link>https://velanms.github.io/blog/posts/how-i-organize-my-api-tests-in-golang/</link>
       <pubDate>Mon, 04 Jul 2022 13:02:23 +0530</pubDate>
-      <guid>https://velanms.com/posts/how-i-organize-my-api-tests-in-golang/</guid>
+      <guid>https://velanms.github.io/blog/posts/how-i-organize-my-api-tests-in-golang/</guid>
       <description>Testing is apparently the most important part in writing API&amp;rsquo;s since there could be so many ways the API&amp;rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&amp;rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&amp;rsquo;m glad if it helps you to organize your tests better :)</description>
       <content:encoded><![CDATA[<p>Testing is apparently the most important part in writing API&rsquo;s since there could be so many ways the API&rsquo;s could mis-perform, and you need some way to check for their authenticity of response. Lately, I was tasked with writing unit tests for the API&rsquo;s in Golang at work. After a lot of trial and error, I figured out a way to organize my tests for better readability and maintainability. This is a quick and dirty rundown of my approach and, I&rsquo;m glad if it helps you to organize your tests better :)</p>
 <h2 id="containment-structs">Containment Structs</h2>
@@ -356,9 +356,9 @@ func init() {
     </item>
     <item>
       <title>Nextcloud to Good Ol&#39; Dav</title>
-      <link>https://velanms.com/posts/nextcloud-to-good-ol-dav/</link>
+      <link>https://velanms.github.io/blog/posts/nextcloud-to-good-ol-dav/</link>
       <pubDate>Sun, 01 May 2022 07:22:41 +0530</pubDate>
-      <guid>https://velanms.com/posts/nextcloud-to-good-ol-dav/</guid>
+      <guid>https://velanms.github.io/blog/posts/nextcloud-to-good-ol-dav/</guid>
       <description>We need standards, not tools
 The above line really resonates with me now. It was a while ago when I saw this lurking in my Mastodon feed and was lost with a scroll. Unfortunately, I&amp;rsquo;m not able to find the person who said it, but whatever is said, is true. It&amp;rsquo;s true because standards remove the Lock-In that is created by a tool and opens a person&amp;rsquo;s horizons to a new beyond.</description>
       <content:encoded><![CDATA[<p>We need standards, not tools</p>
@@ -384,9 +384,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Monthview - April 2022</title>
-      <link>https://velanms.com/posts/monthview-april-2022/</link>
+      <link>https://velanms.github.io/blog/posts/monthview-april-2022/</link>
       <pubDate>Sat, 30 Apr 2022 03:30:39 +0530</pubDate>
-      <guid>https://velanms.com/posts/monthview-april-2022/</guid>
+      <guid>https://velanms.github.io/blog/posts/monthview-april-2022/</guid>
       <description>Monthly Review of April 2022</description>
       <content:encoded><![CDATA[<p>Monthview, because I was too lazy to write &ldquo;Month Review&rdquo;; For real; And it sounded cool too. Doesn&rsquo;t it? Well, this is not just one month view, since I haven&rsquo;t posted month reviews since last two months (because they were boring). This will include the month reviews for February and March. This is going to be a long read, so brace yourself!</p>
 <h2 id="starting-as-a-backend-engineer">Starting as a Backend Engineer!</h2>
@@ -413,9 +413,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Backup, Restore, Migration - a New VPS</title>
-      <link>https://velanms.com/posts/backup-restore-migration-a-new-vps/</link>
+      <link>https://velanms.github.io/blog/posts/backup-restore-migration-a-new-vps/</link>
       <pubDate>Sun, 17 Apr 2022 09:40:53 +0530</pubDate>
-      <guid>https://velanms.com/posts/backup-restore-migration-a-new-vps/</guid>
+      <guid>https://velanms.github.io/blog/posts/backup-restore-migration-a-new-vps/</guid>
       <description>Outlining my experiences moving from in-house selfhosted setup to a new remote VPS</description>
       <content:encoded><![CDATA[<p>If you had been following my blog for some time, you would know that I host most of my services on a self-hosted VPS. For those who are unfamiliar, it&rsquo;s a computer located in a remote part of the world still enabling me to rent it, access it and host things on it so that me and other people can access it from any part of the world. Sounds revolutionary and exhilarating, can&rsquo;t deny.</p>
 <p>However, the VPS that I had owned earlier had a massive storage of 2 TB, for which I had to make a tradeoff with the processing speed to make it “budge” into my budget (pun intended). Why 2 TB you might ask; well, That was to store numerous photos and videos that my family and I had clicked overtime which were aggregated by a program called Photoprism. But that tradeoff didn&rsquo;t seem worth the buck, since I was aggravated by the slowness in processing, and it also became obnoxious at times.</p>
@@ -442,9 +442,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>I realized being developer is not enough</title>
-      <link>https://velanms.com/posts/i-realized-being-a-developer-is-not-enough/</link>
+      <link>https://velanms.github.io/blog/posts/i-realized-being-a-developer-is-not-enough/</link>
       <pubDate>Mon, 21 Mar 2022 10:20:47 +0530</pubDate>
-      <guid>https://velanms.com/posts/i-realized-being-a-developer-is-not-enough/</guid>
+      <guid>https://velanms.github.io/blog/posts/i-realized-being-a-developer-is-not-enough/</guid>
       <description>Lately I have come to a realization that I got to be more of a Person than a Developer in this digital world.</description>
       <content:encoded><![CDATA[<p>We all have heroes we look up to when we are kids, right? Ever since I was pretty young, I used to look up to other developers and wonder when will I get to do all these amazing things they do. Then I grew up, became a software engineer, and I&rsquo;m already doing things that they do. But I genuinely feel there are certain things missing. In this post, I&rsquo;m just brainstorming my thoughts on this.</p>
 <h2 id="more-of-a-person-than-a-developer">More of a Person, than a Developer.</h2>
@@ -461,9 +461,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Re-kindling My Relationship With Paperbacks</title>
-      <link>https://velanms.com/posts/rekindling-my-relationship-with-paperbacks/</link>
+      <link>https://velanms.github.io/blog/posts/rekindling-my-relationship-with-paperbacks/</link>
       <pubDate>Sun, 20 Feb 2022 09:52:36 +0530</pubDate>
-      <guid>https://velanms.com/posts/rekindling-my-relationship-with-paperbacks/</guid>
+      <guid>https://velanms.github.io/blog/posts/rekindling-my-relationship-with-paperbacks/</guid>
       <description>After using Kindle eReader for roughly two years, I&amp;#39;m getting the urges to bounce back to Paperbacks. And here&amp;#39;s why..</description>
       <content:encoded><![CDATA[<p>When I first bought a Kindle device, it seemed like this tech was a game changer. it still does (to some degree of course). One device to satisfy all of my book-reading needs. I was essentially carrying an entire library on my backpack. I literally had to save money to buy a kindle back then since I was in college. But it was worth it. And since, I had put so much effort into buying the kindle, that added an extra layer of attachment. I thought this is the best thing an avid bibiliophile can ask for.</p>
 <p>Few days ago I revisited my bookshelf, took off some old paperbacks and turned some pages around. And I kid you not, I can&rsquo;t tell you how much I had missed that old, coal firey kind of smell welcoming me when I started reading something. That made me wonder, was my switch to Kindle really worth it?</p>
@@ -478,9 +478,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Maybe, The Technology Evolved Too Fast</title>
-      <link>https://velanms.com/posts/the-technology-evolved-too-fast/</link>
+      <link>https://velanms.github.io/blog/posts/the-technology-evolved-too-fast/</link>
       <pubDate>Fri, 04 Feb 2022 11:43:56 +0530</pubDate>
-      <guid>https://velanms.com/posts/the-technology-evolved-too-fast/</guid>
+      <guid>https://velanms.github.io/blog/posts/the-technology-evolved-too-fast/</guid>
       <description>In this post I speak about my thoughts about the current state of technology and what I miss about the (perceived) old times.</description>
       <content:encoded><![CDATA[<p>Last weekend, my mum and I were going through the old photo albums and archive of old times that were stashed in the cupboard. My mum held onto a piece of paper that was unnaturally torn and withered in nature. However, she held onto it as if it was very valuable to her, and it brought a smile to her face. And of course it was. It was a letter written by my dad while he was away for work.</p>
 <p>Back in 1997-98, when I was a small boy, my dad used to stay far away from us for work. He has been away working for years. Yet, he sent so many letters which would take months to reach home. Even though those letters are so many years old, they still hold so much value to my mum. That made me wonder, why doesn’t that happen to us when we send messages across? If technology was supposed to bring people together, why doesn’t it evoke the same feelings as those not-so-techy letters?</p>
@@ -505,9 +505,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Monthly Review: Jan 2022</title>
-      <link>https://velanms.com/posts/monthly-review-jan-2022/</link>
+      <link>https://velanms.github.io/blog/posts/monthly-review-jan-2022/</link>
       <pubDate>Mon, 31 Jan 2022 08:57:21 +0530</pubDate>
-      <guid>https://velanms.com/posts/monthly-review-jan-2022/</guid>
+      <guid>https://velanms.github.io/blog/posts/monthly-review-jan-2022/</guid>
       <description>A succint overview of how the month of January went by!</description>
       <content:encoded><![CDATA[<p>Ah, January! The month where we make so many new year resolutions in the beginning just to realize we were not able to hold onto any of those as days pass by. Jokes apart! I did make resolutions this time, and I think I was able to hold onto some of those. Given the fact that I&rsquo;m worse at keeping the resolutions that I made to myself, I&rsquo;m off to a good start (I think).</p>
 <h2 id="new-blog-new-promises">New Blog, New Promises!</h2>
@@ -528,9 +528,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Ecosystematic Walls of Incarceration </title>
-      <link>https://velanms.com/posts/ecosystem-incarceration/</link>
+      <link>https://velanms.github.io/blog/posts/ecosystem-incarceration/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.com/posts/ecosystem-incarceration/</guid>
+      <guid>https://velanms.github.io/blog/posts/ecosystem-incarceration/</guid>
       <description>Just a little motivation for you to get out of that ecosystem</description>
       <content:encoded><![CDATA[<p>&ldquo;Leave this ecosystem? No way! Why should I leave it when they are providing everything for free and it&rsquo;s so convenient when everything is just there when you want it!&rdquo; Yep! This is me approximately one year ago when I was heavily tied into the Google Ecosystem and I had been totally involved in all aspects inside this Ecosystem for five to six years straight. And it took me couple of months to actually explore the internet and discover why it was a bad idea. It&rsquo;s very easy to say that any service on the internet is convenient because it makes your life so easier. However, every convenience comes with a cost. In here, your freedom of choice and your privacy is at stake!</p>
 <h2 id="the-problem">The Problem</h2>
@@ -555,9 +555,9 @@ The above line really resonates with me now. It was a while ago when I saw this 
     </item>
     <item>
       <title>Simple file upload using Koa.js (or Node.js in General)</title>
-      <link>https://velanms.com/posts/file-upload-koa-js/</link>
+      <link>https://velanms.github.io/blog/posts/file-upload-koa-js/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.com/posts/file-upload-koa-js/</guid>
+      <guid>https://velanms.github.io/blog/posts/file-upload-koa-js/</guid>
       <description>A post about how to use Koa.js to upload files</description>
       <content:encoded><![CDATA[<p>I have been using Koa.js for a while now and it turns out to be great. I’m having a lot of fun playing around with it since its simple and configurable. And I was searching for a <em>ground up</em> way to execute file uploads so that I can tweak its functionality however I want to. And it turns out, It’s not as difficult as I thought. Before going forward, I’m assuming you have a basic knowledge of how to setup basic Koa.js server with routers since it’s being covered in so many articles. So I’ll be skipping the server setup with routers. <a href="https://medium.com/@adam_bickford/creating-a-basic-site-with-koa-pt-1-f3e1711f7a9">Click here</a> if you want to go through an article that covers the same. So, Lets get coding. 😉</p>
 <h3 id="server-page--appjs">Server Page : app.js</h3>
@@ -671,9 +671,9 @@ Pipe node.js streams safely with Promises. <a href="https://www.npmjs.com/packag
     </item>
     <item>
       <title>Docker, a replacement of Virtualenv for Python developement</title>
-      <link>https://velanms.com/posts/docker-as-virtualenv/</link>
+      <link>https://velanms.github.io/blog/posts/docker-as-virtualenv/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.com/posts/docker-as-virtualenv/</guid>
+      <guid>https://velanms.github.io/blog/posts/docker-as-virtualenv/</guid>
       <description>A post about using docker to improve the workflow related to python development</description>
       <content:encoded><![CDATA[<p>Docker! Sounds fancy and simple but trust me it has revolutionized how the tech industry builds, ships and deploys the applications lately. <strong>Docker</strong> is basically a mini-operating system where you build and run your applications which is totally isolated from the native operating system in your computer, and the same container can be deployed in the hosting platforms. If you are new to docker and want to learn more about its intricacies, i highly encourage you to go through the links given in the end of this article to learn more about it. So let’s get right in :)</p>
 <h3 id="creating-a-dockerfile">Creating a Dockerfile</h3>
@@ -790,9 +790,9 @@ bash
     </item>
     <item>
       <title>Lego Coding</title>
-      <link>https://velanms.com/posts/lego-coding/</link>
+      <link>https://velanms.github.io/blog/posts/lego-coding/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.com/posts/lego-coding/</guid>
+      <guid>https://velanms.github.io/blog/posts/lego-coding/</guid>
       <description>My Journey of Building Lego Castles with Code</description>
       <content:encoded><![CDATA[<p>Sounds Ridiculous! isn’t it ? Me comparing the Megabytes or Terabytes of senseless one’s and zero’s of code to something that is built with Lego bricks. Lego is supposed to be a fun process, right? But coding seems like spending too much time in front of the computer finding which semi-colon did you miss and where! And bang your head to the wall until you get it right. They’re nowhere close to a match. How is that even possible?
 Yeah! you might say that rather sarcastically, or had that notion in your mind all along. But trust me, this is a perfect analogy that I can put forth when it comes to the creative process of coding in its entirety. I call it Lego Coding. And it is something that you are already familiar with, but never acknowledged it for how amazing it really is.</p>
