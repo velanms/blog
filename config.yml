@@ -13,6 +13,8 @@ params:
   ShowCodeCopyButtons: true
   
   socialIcons:
+    - name: "github"
+      url: "https://github.com/velanms"
     - name: "gitea"
       url: "https://codeberg.org/velanms"
     - name: "email"
