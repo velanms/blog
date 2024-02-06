@@ -56,6 +56,10 @@ menu:
 
 outputs:
   home:
-    - HTML
-    - RSS
-    - JSON
+    - html
+    - rss
+    - json
+
+services:
+  rss:
+    limit: -1
