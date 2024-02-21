@@ -6,8 +6,33 @@
     <description>Recent content on Velan Salis.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jun 2023 06:18:26 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2024 11:00:00 +0530</lastBuildDate>
     <atom:link href="https://velanms.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Well, I&#39;m back - Kinda!</title>
+      <link>https://velanms.com/posts/well-im-back-kinda/</link>
+      <pubDate>Wed, 21 Feb 2024 11:00:00 +0530</pubDate>
+      <guid>https://velanms.com/posts/well-im-back-kinda/</guid>
+      <description>A post in my blog after a very long break!</description>
+      <content:encoded><![CDATA[<p>Yes! I was gone, and I took a very long-break from tech in general. I was still working as a software engineer, but I needed some time to introspect and watch inward. It seemed like I was so involved in the rat-race, chasing every shiny little thing, that I forgot to sit back and think if it was taking a toll on me. The tech-world has been developing so fast that it has become hard to keep on top of it. And the kind of nerd I am when it comes to technology, I&rsquo;ve had the compulsion to be on top of all the shiny new developments in tech. And it made me burned out, and I just had to shut down my experiments and take a long break.
+And, I&rsquo;m back now and back better than ever. But with new developments:</p>
+<h2 id="end-of-kudlasocial">End of kudla.social</h2>
+<p><a href="https://velanms.com/posts/im-back-after-a-long-break/#namma-kudla">kudla.social</a> was one of my experiments where I tried to make Fediverse popular among the people around me. I had a <a href="https://joinmastodon.org/">Mastodon</a>, <a href="https://velanms.com/posts/how-i-hosted-pixelfed-on-my-selfhosted-setup-with-docker/">Pixelfed</a> and <a href="https://www.minetest.net/">Minetest</a> (Minetest is not a part of the Fediverse, but it&rsquo;s open source) instances running in a managed VPS. &ldquo;kudla&rdquo; is a local slang for “Mangalore” from where I&rsquo;m roughly based off of. And I had great hopes that it would take off.</p>
+<p>Although, the intention was idealistic, it didn&rsquo;t appeal to a lot of people around me. A few interested tech-savvy one&rsquo;s kept using the platform because we knew how elegant the decentralized networks are. But it&rsquo;s unrealistic to expect that amount of enthusiasm from everyone. Eventually the activity was drying down, and I had to sadly shut down kudla.social due to less activity.</p>
+<p>Until next time, when we find more traction for Fediverse among the masses.</p>
+<h2 id="moving-to-apple-ecosystem">Moving to Apple Ecosystem</h2>
+<p>I would probably be the last person in the world to advocate towards the Apple Ecosystem back in those days. And I even wrote a <a href="https://velanms.com/posts/ecosystem-incarceration/">post about it here</a> in my blog. But I still had to move to the Apple ecosystem for just one thing: <strong>Elegance</strong>.</p>
+<p>Don&rsquo;t get me wrong. I don&rsquo;t despise the open source tools. I love open source. And I know the power of open source, its ethics and its reach. But the sheer amount of workaround and hoops I had to jump through to get one small thing working sometimes is frustrating to say the least. As I was getting Acquainted into my professional life, I needed to embrace a system where I don&rsquo;t have to work with workarounds. I needed to sit in my desk and have the setup work out-of-the box. It just leaves a lot of space for me to worry about other important things in my life.</p>
+<p>While I believe open source is great and we should all contribute to the community, it still has a long way to go with respect to how capitalistic our society is. Most of the work in open source is done in &ldquo;leisure-time&rdquo; and out of sheer passion. And its slow. And its always a slow process when communities have come together to build something beautiful. Therefore it takes a lot of time. &ldquo;Time&rdquo; has become a luxury to me now. And I&rsquo;d rather use my time, to contribute to the community with reliable tools, than tweak my tool to make it exactly how I want it to perform.</p>
+<h2 id="mental-wellbeing">Mental Wellbeing</h2>
+<p>I was one of those software engineers that ridiculed mental wellbeing. I thought the hustle-culture in software engineering was how it&rsquo;s supposed to be. And it landed me in a place where I was constantly burned out and I didn&rsquo;t really know why. I had lost my motivation to work and tech in general. <a href="https://velanms.com/posts/lego-coding/">The &ldquo;Velan&rdquo; that enjoys everyday learning new things</a> was lost somewhere.</p>
+<p>Then, I decided that I would start meditating constantly, as a start. It sure is very difficult in the beginning while the mind wanders off. Few weeks down the line, I started to have more control over my mind while I watched my thoughts pass by. As my mind cleared, I felt like I should involve myself in other productive activities. As a result, I started reading more books since I was able to engage some time blocks between my meetings. And I feel better than ever like I was finding my old-self back.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I agree I have done an <a href="https://www.urbandictionary.com/define.php?term=M.%20Night%20Shyamalan">M. Night Shyamalan twist</a> on every ideal that I have stood by in the past. But on the flip-side, that&rsquo;s what makes us human. We identify, We introspect and we learn. This is a part of my learning process. And that&rsquo;s growth.</p>
+<p>Going forward, I&rsquo;m going to focus on my wellbeing. I&rsquo;m going to read more, write more, learn more. This blog could turn from a tech-centric blog to a philosphical-blog or just a general-blog with no intention, I never know. But this will always be a blank slate for me to put my thoughts into words and push them out to the world. Nothing more, Nothing less.</p>
+<p>Take care :)</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Decluttering my online self</title>
       <link>https://velanms.com/posts/decluttering-my-online-self/</link>
