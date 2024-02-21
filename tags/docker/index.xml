@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on Velan Salis.</title>
-    <link>https://velanms.com/tags/docker/</link>
+    <link>https://velan.ms/tags/docker/</link>
     <description>Recent content in docker on Velan Salis.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://velanms.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://velan.ms/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker, a replacement of Virtualenv for Python developement</title>
-      <link>https://velanms.com/posts/docker-as-virtualenv/</link>
+      <link>https://velan.ms/posts/docker-as-virtualenv/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://velanms.com/posts/docker-as-virtualenv/</guid>
+      <guid>https://velan.ms/posts/docker-as-virtualenv/</guid>
       <description>A post about using docker to improve the workflow related to python development</description>
       <content:encoded><![CDATA[<p>Docker! Sounds fancy and simple but trust me it has revolutionized how the tech industry builds, ships and deploys the applications lately. <strong>Docker</strong> is basically a mini-operating system where you build and run your applications which is totally isolated from the native operating system in your computer, and the same container can be deployed in the hosting platforms. If you are new to docker and want to learn more about its intricacies, i highly encourage you to go through the links given in the end of this article to learn more about it. So let’s get right in :)</p>
 <h3 id="creating-a-dockerfile">Creating a Dockerfile</h3>
